@@ -1,0 +1,387 @@
+/*
+
+Copyright: 2024 - VPU
+Name: Thealcohesion VPU
+Author: Fredrick Femar Ochieng
+Author URL(my site): https://github.com/fescii
+
+*/
+
+/*
+
+  Fonts
+  =====
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+
+  Variables
+  =========
+
+*/
+
+:root {
+  --vh-height: 100dvh;
+  --vh-width: 100dvw;
+
+  /* Fonts */
+  --font-main: "Inter";
+  --font-text: "Lexend";
+  --font-mono: "Jetbrains Mono";
+  --font-read: "Work Sans";
+  --font-small: "Sen";
+
+  /* Shadows */
+  --box-shadow: 0 0 0 1px #ffffff25, 0 2px 2px #0000000a, 0 8px 16px -4px #0000000a;
+  --text-shadow: 0 2px 4px #0000000a;
+  --footer-shadow: 0 -2px 4px #0000000a;
+  --header-shadow: 0 2px 4px #00000001;
+
+  /* Scrollbar */
+  --scroll-bar-background: #ddddd7;
+  --scroll-bar-linear: linear-gradient(#28104e, #6237a0);
+
+  /* Borders */
+  --input-border: 1px solid #3d1d723f;
+  --input-border-focus: 1px solid #6237a09a;
+  --input-border-error: 1px solid #ec4a1965;
+  --anchor-border: 1px solid #63b4ffaf;
+  --border: thin solid #28104e1a;
+  --action-border: thin solid #6237a073;
+  --error-border: thin solid #ec4b1965;
+  --rating-border: thin solid #df791aa1;
+
+  /* Backgrounds */
+  --background: #ffffff;
+  --action-background: #28104ed2;
+  --dot-background: #28104ec9;
+  --que-background: #deacf56c;
+  --tab-background: #b0d9ff5d;
+  --attachement-background: var(--gray-background);
+  --button-background: #28104e21;
+  --nav-background: #9754cb31;
+  --gray-background: #e7e7e7d7;
+  --upvote-background: #b0d9ff5d;
+  --downvote-background: #ffc8b75c;
+
+  --investment-background: #f3f3f3;
+  --holding-background: #f3f3f3;
+  --loan-background: #fdbeab70;
+  --revenue-background: #b0d9ff5d;
+
+  --rating-background: #ffab5da9;
+  --review-background: #f5f7fa;
+
+  /* Colors */
+  --accent-color: #6237a0;
+  --tab-color: #0c2d4b;
+  --accent-alt: #deacf5;
+  --alt-color: #9754cb;
+  --action-color: #28104e;
+  --white-color: #ffffff;
+  --dark-white: #c5c5c5;
+  --gray-color: #6b7280;
+  --icon-color: #404040;
+  --text-color: #494d52;
+  --nav-color: #676c72;
+  --label-color: #3f4246;
+  --read-color: #333333;
+  --title-color: #1f2937;
+  --error-color: #ec4b19;
+  --warn-color: #fa6436;
+  --anchor-color: #0065c5;
+  --rating-color:  #df791a;
+
+  /* Reels Colors */
+  --shot-text-color: #b9babc;
+  --shot-read-color: #b5b3b3;
+  --shot-title-color: #d8d8d9;
+  --shot-alt-color: #eb831f;
+  --shot-error-color: #d94317;
+  --shot-anchor-color: #3d8fe5;
+  --shot-background: #57575752;
+  --shot-active-background: #ff932f5d;
+
+  /* Chat Colors */
+  --pin-linear-gradient: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.5));
+  --pin-text-color: #ececec;
+  --pin-gray-color: #c4c4c4;
+  --chat-background: #f0f2f5;
+  --you-background: #ddfff1;
+  --reply-background: #f8f8f8;
+  --chat-hover: #f3f3f3;
+  --chat-you-delivered: var(var(--accent-color));
+  --typing-color: rgba(148 163 184 / 1);
+  --message-background: linear-gradient(rgb(255, 143, 178) 0%, rgb(167, 151, 255) 50%, rgb(0, 229, 255) 100%);
+
+  /* Modal */
+  --modal-background: #6e6e6eb3;
+  --modal-shadow: 0 12px 48px #6d758d33;
+  --modal-border: 1px solid #83858442;
+  --modal-overlay: #28104eb3;
+
+  /* Linear Gradients */
+  --action-linear: linear-gradient(#28104e, #6237a0);
+  --rating-linear: linear-gradient(103.53deg, #df791a -6.72%, #fa6436 109.77%);
+  --button-linear: linear-gradient(#53595f, #627ea0);
+  --warn-linear: linear-gradient(103.53deg, #fa6436 -6.72%, #ec4b19 109.77%);
+  --light-linear: linear-gradient(90deg, #deacf5 0%, #9754cb 100%);
+  --error-linear: linear-gradient(103.53deg, #fa6436 -6.72%, #ec4b19 109.77%);
+  --second-linear: linear-gradient(0deg, #6237a0 0%, #deacf5 100%);
+  --tab-linear: linear-gradient(0deg, #6237a0ce 0%, #deacf5cc 100%);
+  --accent-linear: linear-gradient(103.53deg, #28104e -6.72%, #6237a0 109.77%);
+  --alt-linear: linear-gradient(
+    78deg,
+    #28104e -50%,
+    #28104e 28.67%,
+    #6237a0 57.79%,
+    #9754cb 76.05%,
+    #deacf5 88.54%,
+    #deacf5
+  );
+  --loader-gradient: linear-gradient(
+    -45deg,
+    #ececec,
+    #f8f8f8,
+    #dddddd,
+    #f8f8f8,
+    #ececec
+  );
+  --fade-linear-gradient: linear-gradient(
+    180deg,
+    #ffffff02,
+    #ffffff2a,
+    #ffffff4d,
+    #ffffff69,
+    #ffffff83,
+    #ffffffc7,
+    #ffffffd5,
+    #ffffffea,
+    #fffffff6,
+    #ffffff
+  );
+  --controls-gradient-left: linear-gradient(
+    -90deg,
+    #ffffff02,
+    #ffffff2a,
+    #ffffff4d,
+    #ffffff69,
+    #ffffff83,
+    #ffffffc7,
+    #ffffffd5,
+    #ffffffea,
+    #fffffff6,
+    #ffffff
+  );
+  --controls-gradient-right: linear-gradient(
+    90deg,
+    #ffffff02,
+    #ffffff2a,
+    #ffffff4d,
+    #ffffff69,
+    #ffffff83,
+    #ffffffc7,
+    #ffffffd5,
+    #ffffffea,
+    #fffffff6,
+    #ffffff
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Shadows */
+    --box-shadow: 0 0 0 1px #00000040, 0 2px 2px #ffffff0a, 0 8px 16px -4px #ffffff0a;
+    --text-shadow: 0 2px 4px #ffffff0a;
+    --footer-shadow: 0 -2px 4px #ffffff0a;
+    --header-shadow: 0 2px 4px #ffffff01;
+
+    /* Scrollbar */
+    --scroll-bar-background: #3a3a38;
+    --scroll-bar-linear: linear-gradient(#9754cb, #deacf5);
+
+    /* Borders */
+    --input-border: 1px solid #a855f770;
+    --input-border-focus: 1px solid #e879f9cc;
+    --input-border-error: 1px solid #f87171aa;
+    --anchor-border: 1px solid #60a5fadd;
+    --border: thin solid #62606350;
+    --action-border: thin solid #e391f0aa;
+    --error-border: thin solid #f77e7e70;
+    --rating-border: thin solid #fbbf24dd;
+
+    /* Backgrounds */
+    --background: #000000;
+    --action-background: #a855f7f2;
+    --dot-background: #e879f9e9;
+    --que-background: #7c3aed8c;
+    --tab-background: #3b82f67d;
+    --attachement-background: var(--gray-background);
+    --button-background: #a855f760;
+    --nav-background: #581c8770;
+    --gray-background: #374151f7;
+    --upvote-background: #3b82f67d;
+    --downvote-background: #f97316aa;
+
+    --investment-background: #374151;
+    --holding-background: #374151;
+    --loan-background: #f97316bb;
+    --revenue-background: #3b82f67d;
+
+    --rating-background: #fbbf24dd;
+    --review-background: #374151;
+
+    /* Colors */
+    --accent-color: #a855f7;
+    --tab-color: #60a5fa;
+    --accent-alt: #e879f9;
+    --alt-color: #e879f9;
+    --action-color: #e879f9;
+    --white-color: #ffffff;
+    --dark-white: #6b7280;
+    --gray-color: #9ca3af;
+    --icon-color: #e5e7eb;
+    --text-color: #f3f4f6;
+    --nav-color: #d1d5db;
+    --label-color: #e5e7eb;
+    --read-color: #f9fafb;
+    --title-color: #ffffff;
+    --error-color: #f87171;
+    --warn-color: #fb923c;
+    --anchor-color: #60a5fa;
+    --rating-color: #fbbf24;
+
+    /* Reels Colors */
+    --shot-text-color: #f3f4f6;
+    --shot-read-color: #e5e7eb;
+    --shot-title-color: #ffffff;
+    --shot-alt-color: #fb923c;
+    --shot-error-color: #f87171;
+    --shot-anchor-color: #60a5fa;
+    --shot-background: #374151aa;
+    --shot-active-background: #fb923c7d;
+
+    /* Chat Colors */
+    --pin-linear-gradient: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.8));
+    --pin-text-color: #ffffff;
+    --pin-gray-color: #d1d5db;
+    --chat-background: #1f2937;
+    --you-background: #3b82f6cc;
+    --reply-background: #374151;
+    --chat-hover: #4b5563;
+    --chat-you-delivered: var(var(--accent-color));
+    --typing-color: rgba(209, 213, 219, 1);
+    --message-background: linear-gradient(rgb(168, 85, 247) 0%, rgb(139, 92, 246) 50%, rgb(59, 130, 246) 100%);
+
+    /* Modal */
+    --modal-background: #4a4a4ab3;
+    --modal-shadow: 0 12px 48px #14161d33;
+    --modal-border: 1px solid #33353942;
+    --modal-overlay: #6237a0b3;
+
+    /* Linear Gradients */
+    --action-linear: linear-gradient(#a855f7, #e879f9);
+    --rating-linear: linear-gradient(103.53deg, #fbbf24 -6.72%, #fb923c 109.77%);
+    --button-linear: linear-gradient(#9ca3af, #60a5fa);
+    --warn-linear: linear-gradient(103.53deg, #fb923c -6.72%, #f87171 109.77%);
+    --light-linear: linear-gradient(90deg, #7c3aed 0%, #581c87 100%);
+    --error-linear: linear-gradient(103.53deg, #fb923c -6.72%, #f87171 109.77%);
+    --second-linear: linear-gradient(0deg, #e879f9 0%, #7c3aed 100%);
+    --tab-linear: linear-gradient(0deg, #e879f9dd 0%, #7c3aeddd 100%);
+    --accent-linear: linear-gradient(103.53deg, #e879f9 -6.72%, #7c3aed 109.77%);
+    --alt-linear: linear-gradient(
+      78deg,
+      #e879f9 -50%,
+      #e879f9 28.67%,
+      #7c3aed 57.79%,
+      #581c87 76.05%,
+      #581c87 88.54%,
+      #581c87
+    );
+    --loader-gradient: linear-gradient(
+      -45deg,
+      #1a1a1a,
+      #2a2a2a,
+      #1a1a1a,
+      #2a2a2a,
+      #1a1a1a
+    );
+    --fade-linear-gradient: linear-gradient(
+      180deg,
+      #00000002,
+      #0000002a,
+      #0000004d,
+      #00000069,
+      #00000083,
+      #000000c7,
+      #000000d5,
+      #000000ea,
+      #000000f6,
+      #000000
+    );
+    --controls-gradient-left: linear-gradient(
+      -90deg,
+      #00000002,
+      #0000002a,
+      #0000004d,
+      #00000069,
+      #00000083,
+      #000000c7,
+      #000000d5,
+      #000000ea,
+      #000000f6,
+      #000000
+    );
+    --controls-gradient-right: linear-gradient(
+      90deg,
+      #00000002,
+      #0000002a,
+      #0000004d,
+      #00000069,
+      #00000083,
+      #000000c7,
+      #000000d5,
+      #000000ea,
+      #000000f6,
+      #000000
+    );
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  font-family: inherit;
+  -webkit-box-sizing: border-box;
+}
+
+*:focus {
+  outline: inherit !important;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scroll-bar-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 3px;
+  background: var(--scroll-bar-linear);
+  border-radius: 50px;
+}
+
+html, body {
+  background: var(--background);
+  background-color: var(--background);
+}
