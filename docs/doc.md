@@ -41,7 +41,7 @@ Our VPU is engineered to support our core objectives: fostering educational oppo
 * **Collaborate & Connect:** Become part of a dynamic network of like-minded individuals. Share ideas, build partnerships, and work together in real-time on projects that matter.
 * **Invest & Grow:** Access unique investment opportunities and participate in shared ventures. Our platform provides the tools and framework for secure and profitable business engagement.
 * **Access Resources:** Benefit from systems designed to support your journey, including low-interest loans, a comprehensive market system, and a dedicated funding platform for your innovative causes.
-* **Transact Securely:** Utilize the EAC Wallet, our bespoke financial system, for safe and efficient transactions within the VPU and beyond.
+* **Transact Securely:** Utilize the TNFI Banking, our bespoke financial system, for safe and efficient transactions within the VPU and beyond.
 * **Shape the Future:** Your participation directly contributes to the development of Alkebulan. Be an active agent of change and help build a brighter future for generations.
 
 ## 2. About Us Page
@@ -83,13 +83,13 @@ Thealcohesion is more than an organization; it's a movement. We invite you to jo
 
 ### Frequently Asked Questions (FAQ)
 
-*(Develop a list of 5-10 common questions based on the whitepaper, e.g., "How do I become a member?", "What is the EAC Wallet?", "How are investments managed?", "What are the membership contribution levels?")*
+*(Develop a list of 5-10 common questions based on the whitepaper, e.g., "How do I become a member?", "What is the TNFI Banking?", "How are investments managed?", "What are the membership contribution levels?")*
 
 **Q1: How do I become a member of Thealcohesion VPU?**
 A: Membership is primarily through referral by an existing member, via our outreach mass registration programs, or through Thealcohesion agents. This helps ensure a community aligned with our goals. During registration, you'll provide credentials like your preferred username, full name, ID/Passport details, and contact information.
 
-**Q2: What is the EAC Wallet?**
-A: The EAC Wallet is the official digital wallet for all members of Thealcohesion. It enables secure transactions within the VPU, including deposits, withdrawals, transfers to other members, and connections to external accounts like banks or PayPal. It's designed for real-time, secure financial activities.
+**Q2: What is the TNFI Banking?**
+A: The TNFI Banking is the official digital wallet for all members of Thealcohesion. It enables secure transactions within the VPU, including deposits, withdrawals, transfers to other members, and connections to external accounts like banks or PayPal. It's designed for real-time, secure financial activities.
 
 **Q3: How are investments managed within the VPU?**
 A: The Investment and Shares System allows members to propose, assess, vote on, and invest in various opportunities. Approved investments have dedicated accounts and transparent information regarding investors and updates. The system is designed to foster thriving business and investment in real-time.
@@ -148,10 +148,10 @@ Welcome to the foundational document of Thealcohesion Virtual Pragmatic Universe
 Within this document, you will find detailed information on:
 
 *   The core principles and mission of Thealcohesion.
-*   The comprehensive architecture of the VPU, including its various systems (Membership, Investment, Market, EAC Wallet, etc.).
+*   The comprehensive architecture of the VPU, including its various systems (Membership, Investment, Market, TNFI Banking, etc.).
 *   The organizational structure, formations, bureaus, and roles within the VPU.
 *   The innovative tools designed to empower our members (COV Touring, CABOS Jobs, NGLs Talent, etc.).
-*   The mechanics of our EAC currency, its valuation, and distribution.
+*   The mechanics of our TNFI Banking currency, its valuation, and distribution.
 *   Our commitment to security, technology, and the long-term development of Alkebulan.
 
 **Why Read the Whitepaper?**
@@ -181,7 +181,7 @@ The launch of Thealcohesion VPU is just the beginning. We are continuously worki
 **Upcoming Enhancements/Focus Areas (based on whitepaper hints):**
 
 *   **Advanced Security Measures:** We are exploring cutting-edge solutions like the 'Bluetooth Security Kit' (BSK) to provide an even higher level of secure login and access control for our members. This hardware, featuring Bluetooth connectivity and a fingerprint sensor, aims to enhance account security significantly.
-*   **EAC Ecosystem Expansion:** Further development of the EAC currency and its integration, including refining agent networks and merchant APIs to ensure seamless financial transactions across Alkebulan. This includes clear cost structures for withdrawals and transfers to maintain system sustainability.
+*   **TNFI Banking Ecosystem Expansion:** Further development of the TNFI Banking currency and its integration, including refining agent networks and merchant APIs to ensure seamless financial transactions across Alkebulan. This includes clear cost structures for withdrawals and transfers to maintain system sustainability.
 *   **Guardian & Special Accounts:** Expanding our account services to include Guardian Accounts for minors (managed by their guardians) and Special Accounts for businesses, companies, groups, and institutions, fostering financial inclusion from a young age and for all organizational types.
 *   **Enhanced Platform Tools:** Continuously refining and adding new functionalities to our existing tools (COV Touring, CABOS Jobs, NGLs Talent, DIDOGRAPHICS, PHILOMSCI EDUCATION, NITMOI Creatives, ATINFINITY HEALTH KIT) based on member feedback and evolving needs.
 *   **Community-Driven Development:** Our future development will always be responsive to the needs and aspirations of Thealcohesion members. We envision a platform that grows and evolves with its community, incorporating recompenses and referral systems to motivate and expand our family.
@@ -229,7 +229,7 @@ Don't miss out on the launch and exclusive pre-launch insights. Sign up for our 
 
 **A Glimpse of What Awaits:**
 
-*   **Empowering Systems:** Membership, Investment & Shares, Loans, Market, Funding, and the secure EAC Wallet.
+*   **Empowering Systems:** Membership, Investment & Shares, Loans, Market, Funding, and the secure TNFI Banking.
 *   **Innovative Tools:** COV Touring, CABOS Jobs, NGLs Talent, PHILOMSCI EDUCATION, and more to enhance your experience and opportunities.
 *   **A Community United:** Join a network dedicated to building Alkebulan and empowering generations.
 

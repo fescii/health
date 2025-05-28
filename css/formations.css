@@ -1,0 +1,340 @@
+/* Formations Page Styles */
+
+/* Main grid container */
+.formations-main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* Top level formations container */
+.top-level-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Sub formations grid */
+.formations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* Formation cards */
+.formation-card {
+    background: var(--background);
+    border: var(--border);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    flex: 1 1 300px;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.formation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-linear);
+    opacity: 0.8;
+}
+
+.formation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--modal-shadow);
+}
+
+/* Header styling */
+.formation-header {
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+.formation-header h3 {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.formation-type {
+    background: var(--accent-linear);
+    color: var(--white-color);
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Content styling */
+.formation-content {
+    flex-grow: 1;
+}
+
+.formation-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.formation-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formation-content > ul > li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(98, 55, 160, 0.1);
+    color: var(--text-color);
+    position: relative;
+    padding-left: 2rem;
+    font-weight: 500;
+}
+
+.formation-content > ul > li:before {
+    content: "●";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0.5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.formation-content > ul > li:last-child {
+    border-bottom: none;
+}
+
+/* Sub-formation styling */
+.sub-formation {
+    margin-left: 1.5rem;
+    margin-top: 0.8rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(98, 55, 160, 0.2);
+}
+
+.sub-formation li {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    padding: 0.4rem 0;
+    font-weight: 400;
+}
+
+.sub-formation li:before {
+    content: "▸";
+    color: var(--accent-color);
+    opacity: 0.7;
+}
+
+/* Top level cards */
+.top-level {
+    background: linear-gradient(135deg, var(--accent-color), rgba(98, 55, 160, 0.9));
+    color: var(--white-color);
+    border: none;
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.top-level::before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.top-level .formation-header h3 {
+    color: var(--white-color);
+}
+
+.top-level .formation-type {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--white-color);
+}
+
+.top-level .formation-content p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Section headers */
+.section-header {
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+.section-header h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Hierarchy info box */
+.formation-hierarchy {
+    background: linear-gradient(135deg, rgba(98, 55, 160, 0.1), rgba(98, 55, 160, 0.05));
+    border: 1px solid rgba(98, 55, 160, 0.2);
+    border-left: 5px solid var(--accent-color);
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.formation-hierarchy h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.formation-hierarchy p {
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Formation Card Animations */
+.formation-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.formation-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.formation-card:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.formation-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+/* Interactive Effects */
+.formation-card:hover .formation-type {
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow);
+}
+
+.formation-card:hover .formation-content ul li {
+    transform: translateX(5px);
+    transition: transform 0.2s ease;
+}
+
+/* Ripple Effect */
+.formation-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.formation-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(98, 55, 160, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.formation-card:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .formations-grid {
+        justify-content: center;
+    }
+    
+    .formation-card {
+        flex: 1 1 300px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formations-main-grid {
+        gap: 2rem;
+    }
+
+    .top-level-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .formations-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .formation-card {
+        padding: 1.5rem;
+        flex: 1 1 auto;
+        min-width: unset;
+        max-width: none;
+    }
+
+    .formation-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .formation-hierarchy {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .formation-card {
+        padding: 1rem;
+    }
+
+    .formation-content > ul > li {
+        padding-left: 1.5rem;
+    }
+
+    .sub-formation {
+        margin-left: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .formation-hierarchy h3 {
+        font-size: 1.2rem;
+    }
+}

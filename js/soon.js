@@ -45,7 +45,7 @@ function initCountdown() {
     if (!countdownTimer) return;
 
     // Set launch date to October 30th, 2025
-    const launchDate = new Date('2025-10-30T23:59:59');
+    const launchDate = new Date('2025-11-31T23:59:59');
     
     function updateCountdown() {
         const now = new Date().getTime();
