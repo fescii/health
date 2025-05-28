@@ -97,7 +97,7 @@
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: var(--gray-color);
+    color: var(--text-color);
     line-height: 1.7;
     margin-bottom: 2rem;
     font-family: var(--font-read), sans-serif;
@@ -310,7 +310,7 @@
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: var(--gray-color);
+    color: var(--text-color);
     font-family: var(--font-read), sans-serif;
 }
 
@@ -371,7 +371,7 @@
 
 .description {
     font-size: 1.2rem;
-    color: var(--gray-color);
+    color: var(--text-color);
     line-height: 1.7;
     max-width: 800px;
     margin: 0 auto;
@@ -418,7 +418,7 @@
 
 .timeline-subtitle {
     font-size: 1.1rem;
-    color: var(--gray-color);
+    color: var(--text-color);
     max-width: 800px;
     margin: 0 auto 2rem;
     font-family: var(--font-read), sans-serif;

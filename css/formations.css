@@ -1,46 +1,174 @@
-/* Formations Page Styles */
+/* Formations Page Styles - Modern Clean Design */
 
-/* Main grid container */
+/* CSS Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Main container with strict width control */
 .formations-main-grid {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    margin-top: 2rem;
+    gap: 4rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 1rem;
+    overflow-x: hidden;
 }
 
-/* Top level formations container */
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--alt-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Top Level Formations Container - Strict 2 Column Maximum */
 .top-level-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* Sub formations grid */
-.formations-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: flex-start;
-    align-items: stretch;
+@media (min-width: 768px) {
+    .top-level-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
 }
 
-/* Formation cards */
-.formation-card {
+/* Hierarchical Formations Container - Single Column for Parents */
+.formations-hierarchy {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Parent Formation Cards */
+.parent-formation {
     background: var(--background);
+    padding: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Parent Cards */
+.parent-card {
+    background: var(--investment-background);
+    border-radius: 16px;
+    padding: 2rem;
     border: var(--border);
-    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.parent-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--action-linear);
+    border-radius: 16px 16px 0 0;
+}
+
+/* Sub-formations Container */
+.sub-formations-container {
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Formation Connector */
+.formation-connector {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 2rem;
+    background: var(--action-linear);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.formation-connector::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--white-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Sub-formations Grid - Strict 2 Column Maximum */
+.sub-formations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .sub-formations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2.5rem;
+    }
+}
+
+/* Formation Cards Base Styling */
+.formation-card {
+    background: var(--holding-background);
+    border: var(--border);
+    border-radius: 16px;
     padding: 2rem;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
-    flex: 1 1 300px;
-    min-width: 280px;
-    max-width: 350px;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
 }
 
 .formation-card::before {
@@ -49,292 +177,385 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: var(--accent-linear);
-    opacity: 0.8;
+    height: 3px;
+    background: var(--action-linear);
+    border-radius: 16px 16px 0 0;
+    transition: height 0.3s ease;
 }
 
 .formation-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: var(--modal-shadow);
+    border-color: var(--accent-color);
 }
 
-/* Header styling */
-.formation-header {
-    margin-bottom: 1.5rem;
-    flex-shrink: 0;
+.formation-card:hover::before {
+    height: 4px;
 }
 
-.formation-header h3 {
-    color: var(--accent-color);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    line-height: 1.2;
-}
-
-.formation-type {
-    background: var(--accent-linear);
-    color: var(--white-color);
-    padding: 0.4rem 1rem;
-    border-radius: 25px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Content styling */
-.formation-content {
-    flex-grow: 1;
-}
-
-.formation-content p {
-    color: var(--text-color);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.formation-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.formation-content > ul > li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(98, 55, 160, 0.1);
-    color: var(--text-color);
-    position: relative;
-    padding-left: 2rem;
-    font-weight: 500;
-}
-
-.formation-content > ul > li:before {
-    content: "●";
-    color: var(--accent-color);
-    position: absolute;
-    left: 0.5rem;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-.formation-content > ul > li:last-child {
-    border-bottom: none;
-}
-
-/* Sub-formation styling */
-.sub-formation {
-    margin-left: 1.5rem;
-    margin-top: 0.8rem;
-    padding-left: 1rem;
-    border-left: 2px solid rgba(98, 55, 160, 0.2);
-}
-
-.sub-formation li {
-    font-size: 0.9rem;
-    color: var(--gray-color);
-    padding: 0.4rem 0;
-    font-weight: 400;
-}
-
-.sub-formation li:before {
-    content: "▸";
-    color: var(--accent-color);
-    opacity: 0.7;
-}
-
-/* Top level cards */
+/* Top Level Cards */
 .top-level {
-    background: linear-gradient(135deg, var(--accent-color), rgba(98, 55, 160, 0.9));
-    color: var(--white-color);
-    border: none;
-    flex: 1 1 400px;
-    max-width: 500px;
+    background: var(--investment-background);
+    border: 2px solid var(--action-color);
+    min-height: 220px;
 }
 
 .top-level::before {
-    background: rgba(255, 255, 255, 0.3);
+    height: 5px;
+    background: var(--alt-linear);
 }
 
-.top-level .formation-header h3 {
-    color: var(--white-color);
+.top-level:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--modal-shadow);
 }
 
-.top-level .formation-type {
-    background: rgba(255, 255, 255, 0.25);
-    color: var(--white-color);
+/* Sub Cards */
+.sub-card {
+    background: var(--holding-background);
+    border-color: var(--gray-color);
+    min-height: 180px;
 }
 
-.top-level .formation-content p {
-    color: rgba(255, 255, 255, 0.9);
+.sub-card:hover {
+    background: var(--investment-background);
 }
 
-/* Section headers */
-.section-header {
-    text-align: center;
-    margin: 3rem 0 2rem 0;
+/* Formation Headers */
+.formation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.section-header h2 {
-    color: var(--accent-color);
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.section-header p {
-    color: var(--gray-color);
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Hierarchy info box */
-.formation-hierarchy {
-    background: linear-gradient(135deg, rgba(98, 55, 160, 0.1), rgba(98, 55, 160, 0.05));
-    border: 1px solid rgba(98, 55, 160, 0.2);
-    border-left: 5px solid var(--accent-color);
-    padding: 2rem;
-    margin: 3rem 0;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.formation-hierarchy h3 {
-    color: var(--accent-color);
+.formation-header h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin: 0;
+    line-height: 1.3;
+    flex: 1;
+    min-width: 200px;
 }
 
-.formation-hierarchy p {
-    color: var(--text-color);
-    line-height: 1.7;
-    font-size: 1.05rem;
+.formation-header h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--title-color);
+    margin: 0;
+    line-height: 1.3;
+    flex: 1;
+    min-width: 180px;
 }
 
-/* Formation Card Animations */
-.formation-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+/* Formation Type Badges */
+.formation-type {
+    background: var(--action-linear);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.formation-card.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+.formation-type.sub {
+    background: var(--light-linear);
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
 }
 
-.formation-card:nth-child(even) {
-    animation-delay: 0.1s;
-}
-
-.formation-card:nth-child(odd) {
-    animation-delay: 0.2s;
-}
-
-/* Interactive Effects */
 .formation-card:hover .formation-type {
     transform: scale(1.05);
+    box-shadow: var(--modal-shadow);
+}
+
+/* Formation Content */
+.formation-content {
+    flex: 1;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.formation-content p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Nested Sub-formations */
+.nested-subs {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.nested-sub {
+    background: var(--nav-background);
+    border: var(--border);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nested-sub:hover {
+    background: var(--que-background);
+    border-left-color: var(--alt-color);
+    transform: translateX(5px);
+}
+
+.nested-title {
+    display: block;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.nested-desc {
+    display: block;
+    color: var(--gray-color);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Authority Cards Styling */
+.authority-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.authority-card:hover {
+    border-left-color: var(--alt-color);
+}
+
+/* Organizational Hierarchy Section */
+.formation-hierarchy {
+    background: linear-gradient(135deg, var(--gray-background) 0%, var(--attachement-background) 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem 0;
+    border: var(--border);
+    text-align: center;
     box-shadow: var(--box-shadow);
 }
 
-.formation-card:hover .formation-content ul li {
-    transform: translateX(5px);
-    transition: transform 0.2s ease;
+.formation-hierarchy h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 1.5rem;
+    background: var(--action-linear);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Ripple Effect */
+.formation-hierarchy p {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .formation-card {
-    position: relative;
-    overflow: hidden;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
-.formation-card::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(98, 55, 160, 0.1);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
+/* Focus States for Accessibility */
+.formation-card:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
-.formation-card:active::after {
-    width: 300px;
-    height: 300px;
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-    .formations-grid {
-        justify-content: center;
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .formations-main-grid {
+        max-width: 1000px;
+        padding: 0 1.5rem;
     }
     
-    .formation-card {
-        flex: 1 1 300px;
-        max-width: 400px;
+    .section-header h2 {
+        font-size: 2.2rem;
     }
 }
 
 @media (max-width: 768px) {
     .formations-main-grid {
-        gap: 2rem;
-    }
-
-    .top-level-container {
-        flex-direction: column;
-        gap: 1.5rem;
+        gap: 3rem;
+        padding: 0 1rem;
     }
     
-    .formations-grid {
-        flex-direction: column;
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .parent-formation {
+        padding: 1.5rem;
+    }
+    
+    .parent-card {
+        padding: 1.5rem;
+    }
+    
+    .sub-formations-grid {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding: 1.5rem;
     }
     
     .formation-card {
         padding: 1.5rem;
-        flex: 1 1 auto;
-        min-width: unset;
-        max-width: none;
+        min-height: 160px;
     }
-
+    
+    .formation-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
     .formation-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        min-width: auto;
     }
-
-    .section-header h2 {
-        font-size: 1.6rem;
+    
+    .formation-header h4 {
+        font-size: 1.1rem;
+        min-width: auto;
     }
-
+    
+    .formation-type {
+        align-self: flex-start;
+    }
+    
     .formation-hierarchy {
-        padding: 1.5rem;
-        margin: 2rem 0;
+        padding: 2rem;
+    }
+    
+    .formation-hierarchy h3 {
+        font-size: 1.6rem;
     }
 }
 
 @media (max-width: 480px) {
-    .formation-card {
+    .formations-main-grid {
+        gap: 2.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .parent-formation {
         padding: 1rem;
     }
-
-    .formation-content > ul > li {
-        padding-left: 1.5rem;
+    
+    .parent-card {
+        padding: 1rem;
     }
-
-    .sub-formation {
-        margin-left: 1rem;
+    
+    .sub-formations-grid {
+        padding: 1rem;
+        gap: 1rem;
     }
-
-    .section-header h2 {
+    
+    .formation-card {
+        padding: 1rem;
+        min-height: 140px;
+    }
+    
+    .formation-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .formation-header h4 {
+        font-size: 1rem;
+    }
+    
+    .formation-type {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .formation-type.sub {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .formation-hierarchy {
+        padding: 1.5rem;
+    }
+    
+    .formation-hierarchy h3 {
         font-size: 1.4rem;
     }
+    
+    .formation-connector {
+        display: none;
+    }
+}
 
-    .formation-hierarchy h3 {
-        font-size: 1.2rem;
+/* Print Styles */
+@media print {
+    .formation-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--gray-color);
+    }
+    
+    .formation-type {
+        background: var(--accent-color) !important;
+        color: var(--white-color) !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .formation-card {
+        border: 2px solid var(--title-color);
+    }
+    
+    .formation-type {
+        background: var(--title-color);
+        color: var(--background);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .formation-card,
+    .parent-formation,
+    .nested-sub {
+        transition: none;
+        animation: none;
+    }
+    
+    .formation-card:hover,
+    .parent-formation:hover {
+        transform: none;
     }
 }
