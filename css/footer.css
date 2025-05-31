@@ -299,12 +299,24 @@
     background: #25D366;
     color: white;
     font-weight: 600;
+    display: inline-block;
+    margin: 0 0 8px 0;
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
 }
 
+.footer-contact-link.whatsapp-big.phone-link {
+    background: var(--accent-color);
+}
+
 .footer-contact-link.whatsapp-big:hover {
     background: #128C7E;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.footer-contact-link.whatsapp-big.phone-link:hover {
+    background: var(--accent-alt, var(--accent-color));
     color: #fff;
     transform: translateY(-2px);
 }

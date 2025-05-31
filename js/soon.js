@@ -1,7 +1,7 @@
 // Coming Soon Page JavaScript
 // Alkebulan Cohesion VPU - Soon Page Functionality
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
         // Close menu when clicking on a link
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initCountdown();
     initEmailSignup();
-    initProgressIndicator();
     initFloatingShapes();
     initScrollAnimations();
 });
@@ -46,17 +45,17 @@ function initCountdown() {
 
     // Set launch date to October 30th, 2025
     const launchDate = new Date('2025-11-31T23:59:59');
-    
+
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = launchDate.getTime() - now;
-        
+
         if (timeLeft > 0) {
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            
+
             document.getElementById('days').textContent = days.toString().padStart(2, '0');
             document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
@@ -66,7 +65,7 @@ function initCountdown() {
             countdownTimer.innerHTML = '<div class="countdown-finished">🎉 We\'re Live! 🎉</div>';
         }
     }
-    
+
     // Update countdown immediately and then every second
     updateCountdown();
     setInterval(updateCountdown, 1000);
@@ -77,23 +76,23 @@ function initEmailSignup() {
     const emailForm = document.getElementById('newsletter-form');
     if (!emailForm) return;
 
-    emailForm.addEventListener('submit', function(e) {
+    emailForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         const emailInput = document.getElementById('email-input');
         const email = emailInput.value.trim();
-        
+
         if (validateEmail(email)) {
             // Simulate email submission
             showNotification('🎉 Thank you! You\'ll be notified when we launch!', 'success');
             emailInput.value = '';
-            
+
             // Add some visual feedback
             const submitBtn = emailForm.querySelector('.notify-btn');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = '✓ Subscribed!';
             submitBtn.style.background = 'var(--action-linear)';
-            
+
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.style.background = 'var(--accent-linear)';
@@ -118,14 +117,14 @@ function showNotification(message, type = 'info') {
         <span class="notification-message">${message}</span>
         <button class="toast-close" onclick="closeNotification(this)">&times;</button>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Show notification
     setTimeout(() => {
         notification.classList.add('show');
     }, 100);
-    
+
     // Auto-hide after 5 seconds
     setTimeout(() => {
         closeNotification(notification);
@@ -143,47 +142,24 @@ function closeNotification(element) {
     }, 300);
 }
 
-// Progress Indicator
-function initProgressIndicator() {
-    const progressIndicator = document.querySelector('.progress-indicator');
-    if (!progressIndicator) return;
-
-    window.addEventListener('scroll', () => {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollTop = window.pageYOffset;
-        const scrollPercentage = Math.min((scrollTop / scrollHeight) * 100, 100);
-        
-        const progressBar = document.getElementById('progressBar');
-        if (progressBar) {
-            progressBar.style.width = `${scrollPercentage}%`;
-        }
-        
-        // Update progress text
-        const progressText = progressIndicator.querySelector('.progress-text');
-        if (progressText) {
-            progressText.textContent = `Launch Progress: ${Math.round(scrollPercentage)}%`;
-        }
-    });
-}
-
 // Floating Shapes Animation Enhancement
 function initFloatingShapes() {
     const shapes = document.querySelectorAll('.shape');
-    
+
     shapes.forEach((shape, index) => {
         // Add random movement variation
         const randomDelay = Math.random() * 5;
         const randomDuration = 15 + Math.random() * 10;
-        
+
         shape.style.animationDelay = `${randomDelay}s`;
         shape.style.animationDuration = `${randomDuration}s`;
-        
+
         // Add hover effect
         shape.addEventListener('mouseenter', () => {
             shape.style.animationPlayState = 'paused';
             shape.style.transform = 'scale(1.2)';
         });
-        
+
         shape.addEventListener('mouseleave', () => {
             shape.style.animationPlayState = 'running';
             shape.style.transform = 'scale(1)';
@@ -197,7 +173,7 @@ function initScrollAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -205,7 +181,7 @@ function initScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe elements for animation
     const animateElements = document.querySelectorAll('.vision-item, .feature-category, .social-link');
     animateElements.forEach(el => {
@@ -233,7 +209,7 @@ style.textContent = scrollAnimationCSS;
 document.head.appendChild(style);
 
 // Smooth scroll for navigation links
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.matches('a[href^="#"]')) {
         e.preventDefault();
         const target = document.querySelector(e.target.getAttribute('href'));
@@ -247,7 +223,7 @@ document.addEventListener('click', function(e) {
 });
 
 // Keyboard accessibility
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     // Close notifications with Escape key
     if (e.key === 'Escape') {
         const notifications = document.querySelectorAll('.notification-toast.show');
@@ -262,7 +238,7 @@ function preloadResources() {
     const links = [
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
     ];
-    
+
     links.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'preload';
