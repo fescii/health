@@ -116,8 +116,19 @@
 /* ================================= */
 /* RESPONSIVE NAVIGATION             */
 /* ================================= */
+@media (max-width: 1059px) {
+  .nav-container {
+    width: 100%;
+    margin: 0;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 988px) {
   .hamburger {
     display: flex;
   }
@@ -127,7 +138,7 @@
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background-color: var(--nav-background);
+    background: var(--background);
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -141,7 +152,7 @@
   }
 
   .nav-menu li {
-    margin: 1rem 0;
+    margin: 0;
   }
 
   .nav-link {
@@ -153,7 +164,7 @@
 
 @media (max-width: 480px) {
   .nav-container {
-    padding: 0 4%;
+    padding: 0 10px;
   }
 
   .nav-logo h3 {
