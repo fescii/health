@@ -1353,7 +1353,7 @@ body {
 }
 
 /* Small Mobile Screens */
-@media (max-width: 480px) {
+@media (max-width: 660px) {
   /* hero-section styles moved to hero.css */
 
   .main-headline {
@@ -1384,14 +1384,12 @@ body {
   }
 
   .countdown-container {
-    width: 98%;
+    width: 100%;
     padding: 1.5rem 10px;
   }
 
   .countdown-timer {
-    gap: 0.5rem;
-    flex-direction: column;
-    align-items: center;
+    gap: 0.7px 10px;
   }
 
   .time-box {
@@ -1401,7 +1399,8 @@ body {
   }
 
   .time-number {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .time-label {

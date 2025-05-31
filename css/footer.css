@@ -182,19 +182,15 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 888px) {
   .footer {
-    padding: 40px 4% 20px;
+    padding: 40px 0 20px;
   }
 
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     text-align: left;
-  }
-
-  .footer-logo {
-    justify-content: center;
   }
 
   .footer-contact-links {
@@ -229,11 +225,7 @@
   }
 }
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 40px 3% 20px;
-  }
-
+@media (max-width: 668px) {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 1.5rem;
