@@ -331,7 +331,7 @@ function createEscapeRatRaceFAB() {
                 
                 <p><strong>Join Thealcohesion. Be part of a movement redefining success. Together, a better world can be created, one step at a time.</strong></p>
                 
-                <p>For more information, follow our social media channels. <em>Let US launch the solution together.</em></p>
+                <p>For more information, follow our social media channels. <em><a href="careers.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Let US launch the solution together.</a></em></p>
             </div>
         </div>
     `;

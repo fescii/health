@@ -298,8 +298,9 @@
                 <div class="job-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h3>Minimum Qualification Requirements</h3>
                     <ul>
-                        <li>Diploma or Bachelor's degree in any relevant field (Business, ICT, Social Sciences, Engineering, Arts, etc.).</li>
+                        <li>Certificate, Diploma or Bachelor's degree in any relevant field (Business, ICT, Social Sciences, Engineering, Arts, etc.).</li>
                         <li>Final year students or recent graduates with demonstrable passion are welcome.</li>
+                        <li>People with demonstrable talents are welcomed irrespective of education level.</li>
                     </ul>
                 </div>
 
@@ -329,14 +330,34 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="location">Location *</label>
-                        <input type="text" id="location" name="location" placeholder="City, Country" required>
-                        <span class="error-message" id="locationError"></span>
+                        <label for="city">City/Town/Area *</label>
+                        <input type="text" id="city" name="city" placeholder="Your city" required>
+                        <span class="error-message" id="cityError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="field">Field of Expertise (Optional)</label>
-                        <select id="field" name="field">
+                        <label for="country">Country *</label>
+                        <input type="text" id="country" name="country" placeholder="Your country" required>
+                        <span class="error-message" id="countryError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualification">Qualification *</label>
+                        <select id="qualification" name="qualification" required>
+                            <option value="">Select your qualification</option>
+                            <option value="Certificate-Completed">Certificate - Completed</option>
+                            <option value="Diploma-Completed">Diploma - Completed</option>
+                            <option value="Degree-Completed">Degree - Completed</option>
+                            <option value="Certificate-Final year">Certificate - Final Year</option>
+                            <option value="Diploma-Final Year">Diploma - Final Year</option>
+                            <option value="Degree Final Year">Degree - Final Year</option>
+                        </select>
+                        <span class="error-message" id="qualificationError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="field">Field of Expertise *</label>
+                        <select id="field" name="field" required>
                             <option value="">Select your field</option>
                             <option value="Business & Management">Business & Management</option>
                             <option value="Information Technology">Information Technology</option>
@@ -347,13 +368,23 @@
                             <option value="Finance & Economics">Finance & Economics</option>
                             <option value="Education">Education</option>
                             <option value="Healthcare">Healthcare</option>
+                            <option value="Law">Law</option>
+                            <option value="Philosophy and Political Science">Philosophy and Political Science</option>
                             <option value="Other">Other</option>
                         </select>
+                        <span class="error-message" id="fieldError"></span>
+                    </div>
+
+                    <div class="form-group" id="otherFieldGroup" style="display: none;">
+                        <label for="otherField">Please specify your field *</label>
+                        <input type="text" id="otherField" name="otherField" placeholder="Enter your field of expertise">
+                        <span class="error-message" id="otherFieldError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="motivation">Why do you want to join Thealcohesion? (Optional)</label>
-                        <textarea id="motivation" name="motivation" rows="4" placeholder="Share your motivation and vision..."></textarea>
+                        <label for="motivation">Why do you want to join Thealcohesion? *</label>
+                        <textarea id="motivation" name="motivation" rows="4" placeholder="Share your motivation and vision..." required></textarea>
+                        <span class="error-message" id="motivationError"></span>
                     </div>
 
                     <div class="form-actions">
@@ -540,7 +571,7 @@
                         <h3>Thealcohesion</h3>
                     </div>
                     <p>I AM because YOU ARE</p>
-                    <p>Thealcohesion is a vessal for conveying complete development to foster people cohesion and integration to unlock better collaboration and synergy to create lives worthy living hence Escape the Rat Race<br>We are social-reach us for more information:</p>
+                    <p>Thealcohesion is a vessal for conveying complete development to foster people cohesion and integration to unlock better collaboration and synergy to create lives worthy living hence <a href="careers.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Escape the Rat Race</a><br>We are social-reach us for more information:</p>
                     <div class="social-links">
                         <a href="https://wa.me/254703538027?text=Hello%20Thealcohesion%20team%2C%20I%20want%20to%20get%20involved%2C%20get%20back%20to%20me." class="social-link" aria-label="WhatsApp">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">

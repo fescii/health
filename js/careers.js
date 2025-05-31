@@ -6,15 +6,51 @@
 document.addEventListener('DOMContentLoaded', function () {
   const applicationForm = document.getElementById('applicationForm');
   const submitBtn = document.querySelector('.submit-btn');
+  const fieldSelect = document.getElementById('field');
+  const otherFieldGroup = document.getElementById('otherFieldGroup');
+  const otherFieldInput = document.getElementById('otherField');
   const whatsappNumber = '254703538027';
+
+  // Show/hide other field input based on field selection
+  fieldSelect.addEventListener('change', function () {
+    if (this.value === 'Other') {
+      otherFieldGroup.style.display = 'block';
+      otherFieldInput.required = true;
+    } else {
+      otherFieldGroup.style.display = 'none';
+      otherFieldInput.required = false;
+      otherFieldInput.value = '';
+      hideError('otherField');
+    }
+  });
 
   // Form validation functions
   function validateName(name) {
     return name.trim().length >= 2;
   }
 
-  function validateLocation(location) {
-    return location.trim().length >= 2;
+  function validateCity(city) {
+    return city.trim().length >= 2;
+  }
+
+  function validateCountry(country) {
+    return country.trim().length >= 2;
+  }
+
+  function validateQualification(qualification) {
+    return qualification.trim() !== '';
+  }
+
+  function validateField(field) {
+    return field.trim() !== '';
+  }
+
+  function validateOtherField(otherField) {
+    return otherField.trim().length >= 2;
+  }
+
+  function validateMotivation(motivation) {
+    return motivation.trim().length >= 10;
   }
 
   function showError(fieldId, message) {
@@ -38,11 +74,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const formData = new FormData(applicationForm);
 
     const fullName = formData.get('fullName');
-    const location = formData.get('location');
+    const city = formData.get('city');
+    const country = formData.get('country');
+    const qualification = formData.get('qualification');
+    const field = formData.get('field');
+    const otherField = formData.get('otherField');
+    const motivation = formData.get('motivation');
 
     // Clear previous errors
     hideError('name');
-    hideError('location');
+    hideError('city');
+    hideError('country');
+    hideError('qualification');
+    hideError('field');
+    hideError('otherField');
+    hideError('motivation');
 
     // Validate full name
     if (!validateName(fullName)) {
@@ -50,9 +96,39 @@ document.addEventListener('DOMContentLoaded', function () {
       isValid = false;
     }
 
-    // Validate location
-    if (!validateLocation(location)) {
-      showError('location', 'Please enter a valid location (at least 2 characters)');
+    // Validate city
+    if (!validateCity(city)) {
+      showError('city', 'Please enter a valid city (at least 2 characters)');
+      isValid = false;
+    }
+
+    // Validate country
+    if (!validateCountry(country)) {
+      showError('country', 'Please enter a valid country (at least 2 characters)');
+      isValid = false;
+    }
+
+    // Validate qualification
+    if (!validateQualification(qualification)) {
+      showError('qualification', 'Please select your qualification');
+      isValid = false;
+    }
+
+    // Validate field
+    if (!validateField(field)) {
+      showError('field', 'Please select your field of expertise');
+      isValid = false;
+    }
+
+    // Validate other field if "Other" is selected
+    if (field === 'Other' && !validateOtherField(otherField)) {
+      showError('otherField', 'Please specify your field of expertise (at least 2 characters)');
+      isValid = false;
+    }
+
+    // Validate motivation
+    if (!validateMotivation(motivation)) {
+      showError('motivation', 'Please share your motivation (at least 10 characters)');
       isValid = false;
     }
 
@@ -61,21 +137,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function generateWhatsAppMessage(formData) {
     const fullName = formData.get('fullName');
-    const location = formData.get('location');
+    const city = formData.get('city');
+    const country = formData.get('country');
+    const qualification = formData.get('qualification');
     const field = formData.get('field');
+    const otherField = formData.get('otherField');
     const motivation = formData.get('motivation');
 
     let message = `Hello Thealcohesion team! 👋\\n\\n`;
-    message += `I am ${fullName} from ${location}, and I'm excited to apply to join your founding team.\\n\\n`;
+    message += `I am ${fullName} from ${city}, ${country}, and I'm excited to apply to join your founding team.\\n\\n`;
+    message += `🎓 Qualification: ${qualification}\\n`;
 
-    if (field && field !== '') {
+    if (field === 'Other' && otherField) {
+      message += `🎯 Field of Expertise: ${otherField}\\n\\n`;
+    } else {
       message += `🎯 Field of Expertise: ${field}\\n\\n`;
     }
 
-    if (motivation && motivation.trim() !== '') {
-      message += `💭 My Motivation:\\n${motivation}\\n\\n`;
-    }
-
+    message += `💭 My Motivation:\\n${motivation}\\n\\n`;
     message += `Best regards,\\n${fullName}`;
 
     return encodeURIComponent(message);
@@ -100,7 +179,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Real-time validation
   const nameInput = document.getElementById('fullName');
-  const locationInput = document.getElementById('location');
+  const cityInput = document.getElementById('city');
+  const countryInput = document.getElementById('country');
+  const qualificationSelect = document.getElementById('qualification');
+  const motivationTextarea = document.getElementById('motivation');
 
   nameInput.addEventListener('blur', function () {
     if (!validateName(this.value)) {
@@ -116,17 +198,71 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  locationInput.addEventListener('blur', function () {
-    if (!validateLocation(this.value)) {
-      showError('location', 'Please enter a valid location (at least 2 characters)');
+  cityInput.addEventListener('blur', function () {
+    if (!validateCity(this.value)) {
+      showError('city', 'Please enter a valid city (at least 2 characters)');
     } else {
-      hideError('location');
+      hideError('city');
     }
   });
 
-  locationInput.addEventListener('input', function () {
+  cityInput.addEventListener('input', function () {
     if (this.value.trim().length >= 2) {
-      hideError('location');
+      hideError('city');
+    }
+  });
+
+  countryInput.addEventListener('blur', function () {
+    if (!validateCountry(this.value)) {
+      showError('country', 'Please enter a valid country (at least 2 characters)');
+    } else {
+      hideError('country');
+    }
+  });
+
+  countryInput.addEventListener('input', function () {
+    if (this.value.trim().length >= 2) {
+      hideError('country');
+    }
+  });
+
+  qualificationSelect.addEventListener('change', function () {
+    if (this.value) {
+      hideError('qualification');
+    }
+  });
+
+  fieldSelect.addEventListener('change', function () {
+    if (this.value) {
+      hideError('field');
+    }
+  });
+
+  otherFieldInput.addEventListener('blur', function () {
+    if (fieldSelect.value === 'Other' && !validateOtherField(this.value)) {
+      showError('otherField', 'Please specify your field of expertise (at least 2 characters)');
+    } else {
+      hideError('otherField');
+    }
+  });
+
+  otherFieldInput.addEventListener('input', function () {
+    if (this.value.trim().length >= 2) {
+      hideError('otherField');
+    }
+  });
+
+  motivationTextarea.addEventListener('blur', function () {
+    if (!validateMotivation(this.value)) {
+      showError('motivation', 'Please share your motivation (at least 10 characters)');
+    } else {
+      hideError('motivation');
+    }
+  });
+
+  motivationTextarea.addEventListener('input', function () {
+    if (this.value.trim().length >= 10) {
+      hideError('motivation');
     }
   });
 
