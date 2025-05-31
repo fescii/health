@@ -448,8 +448,8 @@ body {
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-flow: column;
   gap: 3rem;
   margin-bottom: 4rem;
 }
@@ -473,6 +473,12 @@ body {
 
 .feature-category ul {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0;
 }
 
 .feature-category li {

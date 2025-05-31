@@ -1,7 +1,7 @@
 // Platforms Page JavaScript
 // Thealcohesion VPU - Platforms Functionality
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS (Animate On Scroll) for platforms page
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
         // Close menu when clicking on a link
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
@@ -41,12 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // Platform Cards Interactive Effects
 function initPlatformCards() {
     const platformCards = document.querySelectorAll('.platform-card');
-    
+
     platformCards.forEach(card => {
         // Add hover effect with magnetic behavior
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-5px) scale(1.02)';
-            
+
             // Animate feature tags
             const featureTags = this.querySelectorAll('.feature-tag');
             featureTags.forEach((tag, index) => {
@@ -58,9 +58,9 @@ function initPlatformCards() {
             });
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
-            
+
             // Reset feature tags
             const featureTags = this.querySelectorAll('.feature-tag');
             featureTags.forEach(tag => {
@@ -71,10 +71,10 @@ function initPlatformCards() {
         });
 
         // Add click interaction
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             // Create ripple effect
             createRippleEffect(this);
-            
+
             // Show platform details modal (if implemented)
             const platformName = this.querySelector('.platform-header h3').textContent;
             showPlatformDetails(platformName);
@@ -88,12 +88,12 @@ function initPlatformAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
-                
+
                 // Stagger animation for feature tags
                 const featureTags = entry.target.querySelectorAll('.feature-tag');
                 featureTags.forEach((tag, index) => {
@@ -104,11 +104,11 @@ function initPlatformAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe platform cards
     const platformCards = document.querySelectorAll('.platform-card');
     platformCards.forEach(card => observer.observe(card));
-    
+
     // Observe stat items
     const statItems = document.querySelectorAll('.stat-item');
     statItems.forEach(item => observer.observe(item));
@@ -119,19 +119,19 @@ function initPlatformSearch() {
     const searchInput = document.getElementById('platform-search');
     if (!searchInput) return;
 
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         const searchTerm = this.value.toLowerCase();
         const platformCards = document.querySelectorAll('.platform-card');
-        
+
         platformCards.forEach(card => {
             const platformName = card.querySelector('.platform-header h3').textContent.toLowerCase();
             const platformContent = card.querySelector('.platform-content p').textContent.toLowerCase();
             const featureTags = Array.from(card.querySelectorAll('.feature-tag')).map(tag => tag.textContent.toLowerCase());
-            
-            const matchesSearch = platformName.includes(searchTerm) || 
-                                platformContent.includes(searchTerm) || 
-                                featureTags.some(tag => tag.includes(searchTerm));
-            
+
+            const matchesSearch = platformName.includes(searchTerm) ||
+                platformContent.includes(searchTerm) ||
+                featureTags.some(tag => tag.includes(searchTerm));
+
             if (matchesSearch) {
                 card.style.display = 'block';
                 card.classList.add('search-match');
@@ -140,7 +140,7 @@ function initPlatformSearch() {
                 card.classList.remove('search-match');
             }
         });
-        
+
         // Update results counter
         updateSearchResults();
     });
@@ -149,15 +149,15 @@ function initPlatformSearch() {
 // Platform Filter Functionality
 function initPlatformFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    
+
     filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const filterType = this.getAttribute('data-filter');
-            
+
             // Update active filter button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
+
             // Filter platform cards
             filterPlatforms(filterType);
         });
@@ -167,7 +167,7 @@ function initPlatformFilters() {
 // Filter platforms by type
 function filterPlatforms(filterType) {
     const platformCards = document.querySelectorAll('.platform-card');
-    
+
     platformCards.forEach(card => {
         if (filterType === 'all') {
             card.style.display = 'block';
@@ -183,7 +183,7 @@ function filterPlatforms(filterType) {
             }
         }
     });
-    
+
     // Update results counter
     updateSearchResults();
 }
@@ -195,7 +195,7 @@ function createRippleEffect(element) {
     const size = Math.max(rect.width, rect.height);
     const x = rect.width / 2 - size / 2;
     const y = rect.height / 2 - size / 2;
-    
+
     ripple.style.cssText = `
         position: absolute;
         width: ${size}px;
@@ -210,11 +210,11 @@ function createRippleEffect(element) {
         opacity: 0.3;
         z-index: 10;
     `;
-    
+
     element.style.position = 'relative';
     element.style.overflow = 'hidden';
     element.appendChild(ripple);
-    
+
     setTimeout(() => ripple.remove(), 600);
 }
 
@@ -223,30 +223,25 @@ function showPlatformDetails(platformName) {
     // Create modal overlay
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'platform-modal-overlay';
-    modalOverlay.innerHTML = `
+    modalOverlay.innerHTML = /*html*/ `
         <div class="platform-modal">
             <div class="platform-modal-header">
                 <h3>${platformName}</h3>
                 <button class="platform-modal-close">&times;</button>
             </div>
             <div class="platform-modal-content">
-                <p>Detailed information about ${platformName} platform...</p>
                 <div class="platform-modal-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                    </ul>
+                    <p> We are working on this platform and shall be available when launching the Thealcohesion VPU.</p>
+                    <p>For more information about ${platformName}:</p>
                 </div>
                 <div class="platform-modal-actions">
-                    <button class="platform-btn primary">Learn More</button>
-                    <button class="platform-btn secondary">Get Started</button>
+                    <a href="https://wa.me/254703538027?text=I%20am%20interested%20in%20the%20${encodeURIComponent(platformName)}%2C%20tell%20me%20more%20about%20it" class="platform-btn primary">Whatsapp</a>
+                    <a href="tel:+254703538027" class="platform-btn secondary">Call us</a>
                 </div>
             </div>
         </div>
     `;
-    
+
     // Add modal styles
     modalOverlay.style.cssText = `
         position: fixed;
@@ -262,14 +257,14 @@ function showPlatformDetails(platformName) {
         opacity: 0;
         transition: opacity 0.3s ease;
     `;
-    
+
     document.body.appendChild(modalOverlay);
-    
+
     // Show modal with animation
     setTimeout(() => {
         modalOverlay.style.opacity = '1';
     }, 10);
-    
+
     // Close modal functionality
     const closeBtn = modalOverlay.querySelector('.platform-modal-close');
     closeBtn.addEventListener('click', () => {
@@ -278,7 +273,7 @@ function showPlatformDetails(platformName) {
             document.body.removeChild(modalOverlay);
         }, 300);
     });
-    
+
     // Close on overlay click
     modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) {
@@ -294,7 +289,7 @@ function showPlatformDetails(platformName) {
 function updateSearchResults() {
     const visibleCards = document.querySelectorAll('.platform-card[style*="display: block"], .platform-card:not([style*="display: none"])');
     const resultsCounter = document.getElementById('results-counter');
-    
+
     if (resultsCounter) {
         resultsCounter.textContent = `${visibleCards.length} platforms found`;
     }
@@ -314,25 +309,25 @@ function scrollToPlatform(platformId) {
 // Platform statistics counter animation
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
-    
+
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target') || counter.textContent);
         const duration = 2000; // 2 seconds
         const start = 0;
         const startTime = performance.now();
-        
+
         function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const current = Math.floor(progress * target);
-            
+
             counter.textContent = current.toLocaleString();
-            
+
             if (progress < 1) {
                 requestAnimationFrame(updateCounter);
             }
         }
-        
+
         requestAnimationFrame(updateCounter);
     });
 }
@@ -356,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add CSS animations for platforms
-const platformAnimationCSS = `
+const platformAnimationCSS = /*css*/ `
 .platform-card, .stat-item {
     opacity: 0;
     transform: translateY(30px);
@@ -429,11 +424,12 @@ const platformAnimationCSS = `
 }
 
 .platform-btn {
-    padding: 0.8rem 1.5rem;
+    padding: 7px 20px;
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
