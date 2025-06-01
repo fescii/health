@@ -1232,13 +1232,13 @@ body {
   }
 
   /* Social and Community */
-  .social-links {
+  .social-contact-links {
     gap: 1rem;
     flex-direction: column;
     align-items: center;
   }
 
-  .social-link {
+  .social-contact-links .social-link {
     padding: 0.8rem 1.5rem;
     width: 100%;
     max-width: 280px;
@@ -1460,13 +1460,13 @@ body {
   }
 
   /* Social */
-  .social-links {
+  .social-contact-links {
     gap: 1rem;
     flex-direction: column;
     align-items: center;
   }
 
-  .social-link {
+  .social-contact-links .social-link {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
     border-radius: 25px;
@@ -1688,7 +1688,7 @@ body {
     font-size: 0.8rem;
   }
 
-  .social-link {
+  .social-contact-links .social-link {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
@@ -1869,7 +1869,7 @@ body {
     padding: 60px 4%;
   }
 
-  .social-links {
+  .social-contact-links {
     gap: 1.5rem;
   }
 
@@ -1944,11 +1944,11 @@ body {
     font-size: 1.1rem;
   }
 
-  .social-links {
+  .social-contact-links {
     gap: 1.2rem;
   }
 
-  .social-link {
+  .social-contact-links .social-link {
     padding: 0.8rem 1.5rem;
   }
 
