@@ -9,7 +9,23 @@ document.addEventListener('DOMContentLoaded', function () {
   const fieldSelect = document.getElementById('field');
   const otherFieldGroup = document.getElementById('otherFieldGroup');
   const otherFieldInput = document.getElementById('otherField');
+  const qualificationSelect = document.getElementById('qualification');
+  const otherQualificationGroup = document.getElementById('otherQualificationGroup');
+  const otherQualificationInput = document.getElementById('otherQualification');
   const whatsappNumber = '254703538027';
+
+  // Show/hide other qualification input based on qualification selection
+  qualificationSelect.addEventListener('change', function () {
+    if (this.value === 'Other') {
+      otherQualificationGroup.style.display = 'block';
+      otherQualificationInput.required = true;
+    } else {
+      otherQualificationGroup.style.display = 'none';
+      otherQualificationInput.required = false;
+      otherQualificationInput.value = '';
+      hideError('otherQualification');
+    }
+  });
 
   // Show/hide other field input based on field selection
   fieldSelect.addEventListener('change', function () {
@@ -39,6 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function validateQualification(qualification) {
     return qualification.trim() !== '';
+  }
+
+  function validateOtherQualification(otherQualification) {
+    return otherQualification.trim().length >= 2;
   }
 
   function validateField(field) {
@@ -77,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const city = formData.get('city');
     const country = formData.get('country');
     const qualification = formData.get('qualification');
+    const otherQualification = formData.get('otherQualification');
     const field = formData.get('field');
     const otherField = formData.get('otherField');
     const motivation = formData.get('motivation');
@@ -86,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     hideError('city');
     hideError('country');
     hideError('qualification');
+    hideError('otherQualification');
     hideError('field');
     hideError('otherField');
     hideError('motivation');
@@ -114,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
       isValid = false;
     }
 
+    // Validate other qualification if "Other" is selected
+    if (qualification === 'Other' && !validateOtherQualification(otherQualification)) {
+      showError('otherQualification', 'Please specify your qualification (at least 2 characters)');
+      isValid = false;
+    }
+
     // Validate field
     if (!validateField(field)) {
       showError('field', 'Please select your field of expertise');
@@ -133,31 +161,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     return isValid;
-  }
-
-  function generateWhatsAppMessage(formData) {
+  } function generateWhatsAppMessage(formData) {
     const fullName = formData.get('fullName');
     const city = formData.get('city');
     const country = formData.get('country');
     const qualification = formData.get('qualification');
+    const otherQualification = formData.get('otherQualification');
     const field = formData.get('field');
     const otherField = formData.get('otherField');
     const motivation = formData.get('motivation');
 
-    let message = `Hello Thealcohesion team! 👋\\n\\n`;
-    message += `I am ${fullName} from ${city}, ${country}, and I'm excited to apply to join your founding team.\\n\\n`;
-    message += `🎓 Qualification: ${qualification}\\n`;
+    let message = `Hello Thealcohesion team!%0A`;
+    message += `I am ${fullName} from ${city}, ${country}, and I'm excited to apply to join your founding team.%0A`;
 
-    if (field === 'Other' && otherField) {
-      message += `🎯 Field of Expertise: ${otherField}\\n\\n`;
+    // Add qualification
+    if (qualification === 'Other' && otherQualification) {
+      message += `QUALIFICATION: ${otherQualification}%0A`;
     } else {
-      message += `🎯 Field of Expertise: ${field}\\n\\n`;
+      message += `QUALIFICATION: ${qualification}%0A`;
     }
 
-    message += `💭 My Motivation:\\n${motivation}\\n\\n`;
-    message += `Best regards,\\n${fullName}`;
+    // Add field of expertise
+    if (field === 'Other' && otherField) {
+      message += `FIELD OF EXPERTISE: ${otherField}%0A`;
+    } else {
+      message += `FIELD OF EXPERTISE: ${field}%0A`;
+    }
 
-    return encodeURIComponent(message);
+    message += `MY MOTIVATION:%0A${motivation}%0A%0A`;
+    message += `Best regards,%0A${fullName}`;
+
+    return message;
   }
 
   function setButtonLoading(loading) {
@@ -181,8 +215,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const nameInput = document.getElementById('fullName');
   const cityInput = document.getElementById('city');
   const countryInput = document.getElementById('country');
-  const qualificationSelect = document.getElementById('qualification');
   const motivationTextarea = document.getElementById('motivation');
+
+  // Add real-time validation for other qualification
+  otherQualificationInput.addEventListener('blur', function () {
+    if (qualificationSelect.value === 'Other' && !validateOtherQualification(this.value)) {
+      showError('otherQualification', 'Please specify your qualification (at least 2 characters)');
+    } else {
+      hideError('otherQualification');
+    }
+  });
+
+  otherQualificationInput.addEventListener('input', function () {
+    if (this.value.trim().length >= 2) {
+      hideError('otherQualification');
+    }
+  });
 
   nameInput.addEventListener('blur', function () {
     if (!validateName(this.value)) {
