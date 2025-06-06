@@ -12,6 +12,13 @@ body {
   color: var(--text-color);
   background: var(--background);
   overflow-x: hidden;
+  min-width: 320px; /* Minimum width to prevent layout issues */
+  max-width: 100vw; /* Prevent exceeding viewport width */
+  position: relative; /* Establish positioning context */
+}
+
+html {
+  overflow-x: hidden; /* Additional overflow prevention at root level */
 }
 
 .container {

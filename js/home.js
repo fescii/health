@@ -4,6 +4,9 @@
  * Initialize all home page functionality
  */
 function initHomePage() {
+    // Apply initial overflow prevention immediately
+    initOverflowPrevention();
+    
     initCountdownTimer();
     initParallaxEffect();
     createFloatingParticles();
@@ -14,6 +17,50 @@ function initHomePage() {
     // Home specific console message
     console.log('%c🚀 Welcome to AO3 Landing Page! 🚀', 'color: #FFD700; font-size: 20px; font-weight: bold;');
     console.log('%cBuilt with passion for the future of decentralized computing', 'color: #00BFFF; font-size: 14px;');
+}
+
+/**
+ * Prevent initial overflow issues before animations kick in
+ */
+function initOverflowPrevention() {
+    // Apply immediate positioning fixes that normally happen during scroll
+    const hero = document.querySelector('.hero');
+    const heroContent = document.querySelector('.hero-content');
+    const floatingElements = document.querySelectorAll('.element');
+    const particles = document.querySelectorAll('.particle');
+    
+    if (hero) {
+        // Ensure hero is properly positioned
+        hero.style.transform = 'translateY(0)';
+        hero.style.width = '100%';
+        hero.style.maxWidth = '100vw';
+    }
+    
+    if (heroContent) {
+        // Ensure hero content doesn't overflow
+        heroContent.style.width = '100%';
+        heroContent.style.maxWidth = '600px';
+    }
+    
+    // Apply initial transforms to floating elements
+    floatingElements.forEach((element, index) => {
+        element.style.transform = 'translateY(0)';
+        element.style.maxWidth = '100%';
+    });
+    
+    // Apply initial transforms to particles
+    particles.forEach((particle) => {
+        particle.style.transform = 'translateY(0)';
+        particle.style.maxWidth = '100%';
+    });
+    
+    // Ensure all containers have proper overflow handling
+    const containers = document.querySelectorAll('.floating-elements, .hero-particles');
+    containers.forEach(container => {
+        container.style.overflow = 'hidden';
+        container.style.width = '100%';
+        container.style.maxWidth = '100%';
+    });
 }
 
 /**
@@ -375,5 +422,6 @@ window.HomePageModule = {
     createFloatingParticles,
     initButtonAnimations,
     initStatsCounter,
-    initTypingAnimation
+    initTypingAnimation,
+    initOverflowPrevention
 };
