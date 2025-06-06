@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <!-- Homepage -->
     <url>
         <loc>https://vpu.world/</loc>
         <lastmod>2025-06-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://vpu.world/img/logo.svg</image:loc>
+            <image:title>Thealcohesion VPU Logo</image:title>
+            <image:caption>Official logo of Thealcohesion VPU - Your Gateway to Escape the Rat Race</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://vpu.world/img/poster.png</image:loc>
+            <image:title>Thealcohesion VPU Promotional Poster</image:title>
+            <image:caption>Promotional poster showcasing Thealcohesion VPU digital ecosystem</image:caption>
+        </image:image>
     </url>
     
     <!-- Main Pages -->
@@ -49,5 +61,41 @@
         <lastmod>2025-06-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:thumbnail_loc>https://vpu.world/img/poster.png</video:thumbnail_loc>
+            <video:title>Thealcohesion VPU Launch Preview</video:title>
+            <video:description>Exclusive preview of the upcoming Thealcohesion VPU launch - a revolutionary digital ecosystem designed to help you escape the rat race</video:description>
+            <video:content_loc>https://vpu.world/img/video.mp4</video:content_loc>
+            <video:duration>120</video:duration>
+            <video:publication_date>2025-06-06T00:00:00+00:00</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+        </video:video>
+        <image:image>
+            <image:loc>https://vpu.world/img/logo.svg</image:loc>
+            <image:title>Thealcohesion VPU Logo</image:title>
+            <image:caption>Official Thealcohesion VPU logo on launch page</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Media Resources -->
+    <url>
+        <loc>https://vpu.world/img/logo.svg</loc>
+        <lastmod>2025-06-06</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://vpu.world/img/poster.png</loc>
+        <lastmod>2025-06-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>https://vpu.world/img/video.mp4</loc>
+        <lastmod>2025-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset>
