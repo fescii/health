@@ -22,10 +22,10 @@ html {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0;
 }
 
 /* Navigation styles moved to header.css */
@@ -524,7 +524,7 @@ html {
   }
 
   body {
-    padding: 0 20px;
+    padding: 0;
     margin: 0;
   }
 }
@@ -542,11 +542,19 @@ html {
   }
 
   .container {
+    padding: 0 10px;
+  }
+
+  .section-header {
+    margin: 0;
     padding: 0;
   }
 
-  body {
-    padding: 0 10px;
+  .section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--title-color);
     margin: 0;
+    font-family: var(--font-text), sans-serif;
   }
 }

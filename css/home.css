@@ -355,7 +355,7 @@
 
 /* VPU Section */
 .vpu-section {
-  padding:ss 0;
+  padding: 50px 0;
   background: linear-gradient(
     135deg,
     var(--bg-primary) 0%,
@@ -396,7 +396,7 @@
 .foundation-content,
 .objectives-content {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 2rem;
 }
 
@@ -541,6 +541,12 @@
   border-color: rgba(255, 215, 0, 0.3);
 }
 
+.benefit-card:hover .benefit-icon svg {
+  stroke: #ffd700;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
 .benefit-card:hover::before {
   opacity: 1;
 }
@@ -549,6 +555,17 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: var(--accent-color);
+  transition: all 0.3s ease;
 }
 
 .benefit-card h3 {
@@ -606,7 +623,7 @@
 /* Responsive Design */
 @media (max-width: 968px) {
   .hero {
-    flex-direction: column;
+    flex-flow: column;
     text-align: center;
   }
 
@@ -617,25 +634,38 @@
   }
 
   .foundation-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-flow: column;
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .ethic-codes {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
   }
 
-  .countdown {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
+  .foundation-content,
+  .objectives-content {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 740px) {
   .hero {
     min-height: max-content;
-    flex-direction: column;
+    flex-flow: column;
     padding: 80px 0 20px;
+  }
+
+  .vpu-section {
+    padding: 40px 0;
   }
 
   .hero-content {
@@ -643,7 +673,7 @@
   }
 
   .hero-cta {
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
   }
 
@@ -677,6 +707,94 @@
 
   .benefit-card {
     padding: 2rem;
+  }
+
+  /* Improved Foundation Cards for Mobile */
+  .foundation-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .foundation-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(45deg, var(--accent-color), #ffd700);
+    opacity: 0.7;
+  }
+
+  .foundation-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+  }
+
+  .foundation-card p {
+    text-align: left;
+    line-height: 1.6;
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+
+  /* Special styling for Core Services ordered list */
+  .foundation-card ol {
+    text-align: left;
+    padding-left: 1rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  .foundation-card ol li {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+
+  .foundation-card ol li::marker {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+
+  /* Improved ethics codes for mobile */
+  .ethic-codes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .ethic-item {
+    background: rgba(255, 215, 0, 0.08);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+    line-height: 1.5;
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  .ethic-item strong {
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .benefits-section {
+    padding: 50px 0;
+    background: var(--bg-primary);
+    position: relative;
   }
 }
 

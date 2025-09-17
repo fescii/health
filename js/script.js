@@ -125,9 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Timeline Collapsible Functionality
     initTimelineCollapsibles();
-
-    // Initialize Escape Rat Race FAB
-    createEscapeRatRaceFAB();
 });
 
 // Modern Timeline Functions
@@ -297,78 +294,4 @@ function createRippleEffect(element, rect) {
     element.appendChild(ripple);
 
     setTimeout(() => ripple.remove(), 600);
-}
-
-// Modern timeline functionality moved to about.js
-
-// Timeline functionality moved to about.js
-
-// Floating Action Button (FAB) for "Escape Rat Race"
-function createEscapeRatRaceFAB() {
-    // Create FAB button
-    const fab = document.createElement('button');
-    fab.className = 'escape-rat-race-fab';
-    fab.setAttribute('aria-label', 'Escape Rat Race');
-    fab.innerHTML = 'ESCAPE<br>RAT RACE';
-
-    // Create modal with overlay structure
-    const modal = document.createElement('div');
-    modal.className = 'escape-rat-race-modal';
-    modal.innerHTML = `
-        <div class="overlay"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>🚀 Escape the Rat Race</h2>
-                <button class="modal-close" aria-label="Close modal">×</button>
-            </div>
-            <div class="modal-body">
-                <p>In a bustling city, people rush by, consumed by the rat race, chasing success and wealth. But what is the true cost of this relentless pursuit? Amidst the chaos, one person sits overwhelmed at a desk, buried under papers and a glowing screen. This life, filled with competition and stress, breeds greed, envy, and anxiety.</p>
-                
-                <p>Is this the purpose of life? To be overwhelmed by the quest for a 'better life'? What if another way exists? A way to live meaningfully?</p>
-                
-                <h3>🌟 Introducing Thealcohesion</h3>
-                <p>A community designed to redefine life's purpose. Here, success isn't just about personal gain; it's about serving humanity, self-development, and regenerating a better world. Thealcohesion isn't merely a concept; it's a movement uniting Thealcohesion Space Natives to unlock synergy and collaboration. Together, lives can be transformed into something truly worthwhile.</p>
-                
-                <h3>🎯 Building a Sustainable Future</h3>
-                <p>Focusing on seven core areas – Leadership and Governance, Entrepreneurship, Health, Investment, Education, IT, and Research – Thealcohesion aims to build a sustainable future. By pooling resources, a new society can emerge, achieving shared goals through principles that help Thealcohesion Space Natives learn to manage activities that enhance their lives and the world, not for personal reward, but for the common good.</p>
-                
-                <h3>⚡ The Energy Currency</h3>
-                <p>At the heart of Thealcohesion lies a new currency – The Energy. Unlike traditional money, this energy-based system is backed by the potential of its members, empowering them to contribute freely.</p>
-                
-                <h3>🌐 Thealcohesion VPU</h3>
-                <p>To realize this vision, Thealcohesion VPU – a Virtual Pragmatic Universe platform – is being created. Here, members shall pool resources, build investments, share knowledge, and collaborate for the common good. The VPU shall enable secure transactions, business growth, and access to educational resources. It's not just a tool; it's a thriving ecosystem fostering growth, collaboration, and innovation.</p>
-                
-                <p>In Thealcohesion, every member plays a role in regenerating Thealcohesion Space. Lives are transformed as everyone works towards a shared goal: creating a world where life is truly worth living.</p>
-                
-                <p><strong>Join Thealcohesion. Be part of a movement redefining success. Together, a better world can be created, one step at a time.</strong></p>
-                
-                <p>For more information, follow our social media channels. <em><a href="careers.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Let US launch the solution together.</a></em></p>
-            </div>
-        </div>
-    `;
-
-    // Add to page
-    document.body.appendChild(fab);
-    document.body.appendChild(modal);
-
-    // Add event listeners
-    fab.addEventListener('click', () => {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-
-    const closeModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    };
-
-    modal.querySelector('.modal-close').addEventListener('click', closeModal);
-    modal.querySelector('.overlay').addEventListener('click', closeModal);
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
 }

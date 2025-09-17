@@ -28,8 +28,8 @@ function initCountdown() {
     const countdownTimer = document.getElementById('countdown-timer');
     if (!countdownTimer) return;
 
-    // Set launch date to October 30th, 2025
-    const launchDate = new Date('2025-11-31T23:59:59');
+    // Set launch date to September 25th, 2024
+    const launchDate = new Date('2024-09-25T23:59:59');
 
     function updateCountdown() {
         const now = new Date().getTime();

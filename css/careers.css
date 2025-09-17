@@ -331,7 +331,7 @@
 
 .job-type-info {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   gap: 1.5rem;
   position: relative;

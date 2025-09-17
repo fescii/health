@@ -474,7 +474,7 @@ body {
 .feature-category ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
@@ -1205,7 +1205,7 @@ body {
   }
 
   .feature-category ul {
-    flex-direction: column;
+    flex-flow: column;
     gap: 1rem;
   }
 
@@ -1234,7 +1234,7 @@ body {
   /* Social and Community */
   .social-contact-links {
     gap: 1rem;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
   }
 
@@ -1271,7 +1271,7 @@ body {
 
   /* Form improvements */
   .form-group {
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
   }
 
@@ -1462,7 +1462,7 @@ body {
   /* Social */
   .social-contact-links {
     gap: 1rem;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
   }
 
@@ -2006,7 +2006,7 @@ body {
   }
 
   .countdown-timer {
-    flex-direction: row;
+    flex-flow: row;
     flex-wrap: wrap;
     gap: 1rem;
   }

@@ -6,14 +6,14 @@
 function initHomePage() {
     // Apply initial overflow prevention immediately
     initOverflowPrevention();
-    
+
     initCountdownTimer();
     initParallaxEffect();
     createFloatingParticles();
     initButtonAnimations();
     initStatsCounter();
     initTypingAnimation();
-    
+
     // Home specific console message
     console.log('%c🚀 Welcome to AO3 Landing Page! 🚀', 'color: #FFD700; font-size: 20px; font-weight: bold;');
     console.log('%cBuilt with passion for the future of decentralized computing', 'color: #00BFFF; font-size: 14px;');
@@ -28,32 +28,32 @@ function initOverflowPrevention() {
     const heroContent = document.querySelector('.hero-content');
     const floatingElements = document.querySelectorAll('.element');
     const particles = document.querySelectorAll('.particle');
-    
+
     if (hero) {
         // Ensure hero is properly positioned
         hero.style.transform = 'translateY(0)';
         hero.style.width = '100%';
         hero.style.maxWidth = '100vw';
     }
-    
+
     if (heroContent) {
         // Ensure hero content doesn't overflow
         heroContent.style.width = '100%';
-        heroContent.style.maxWidth = '600px';
+        heroContent.style.maxWidth = '100%';
     }
-    
+
     // Apply initial transforms to floating elements
     floatingElements.forEach((element, index) => {
         element.style.transform = 'translateY(0)';
         element.style.maxWidth = '100%';
     });
-    
+
     // Apply initial transforms to particles
     particles.forEach((particle) => {
         particle.style.transform = 'translateY(0)';
         particle.style.maxWidth = '100%';
     });
-    
+
     // Ensure all containers have proper overflow handling
     const containers = document.querySelectorAll('.floating-elements, .hero-particles');
     containers.forEach(container => {
@@ -100,13 +100,13 @@ function initCountdownTimer() {
         const countdownElement = document.getElementById('countdown');
         if (countdownElement) {
             countdownElement.innerHTML = countdownHTML;
-            
+
             // Add animation class to updated units
             const units = countdownElement.querySelectorAll('.time-unit');
             units.forEach((unit, index) => {
                 const currentValue = timeUnits[index].value;
                 const displayValue = unit.querySelector('span').textContent;
-                
+
                 if (currentValue.toString().padStart(2, '0') !== displayValue) {
                     unit.style.transform = 'scale(1.1)';
                     setTimeout(() => {
@@ -140,7 +140,7 @@ function initParallaxEffect() {
         // Parallax effect for hero background
         if (scrolled < hero.offsetHeight) {
             hero.style.transform = `translateY(${rate}px)`;
-            
+
             // Move floating elements at different rates
             floatingElements.forEach((element, index) => {
                 const elementRate = rateElements * (0.5 + index * 0.2);
@@ -173,22 +173,22 @@ function createFloatingParticles() {
     for (let i = 0; i < 20; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-        
+
         // Random size between 2-8px
         const size = Math.random() * 6 + 2;
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
-        
+
         // Random position
         particle.style.left = `${Math.random() * 100}%`;
         particle.style.top = `${Math.random() * 100}%`;
-        
+
         // Random animation delay
         particle.style.animationDelay = `${Math.random() * 6}s`;
-        
+
         // Random animation duration
         particle.style.animationDuration = `${4 + Math.random() * 4}s`;
-        
+
         heroParticles.appendChild(particle);
     }
 
@@ -221,17 +221,17 @@ function createFloatingParticles() {
  */
 function initButtonAnimations() {
     const buttons = document.querySelectorAll('.cta-primary, .cta-secondary');
-    
+
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             // Remove existing ripple
             this.classList.remove('ripple');
-            
+
             // Trigger ripple effect
             setTimeout(() => {
                 this.classList.add('ripple');
             }, 10);
-            
+
             // Remove ripple class after animation
             setTimeout(() => {
                 this.classList.remove('ripple');
@@ -239,11 +239,11 @@ function initButtonAnimations() {
         });
 
         // Add hover sound effect (optional)
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-2px) scale(1.02)';
         });
 
-        button.addEventListener('mouseleave', function() {
+        button.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
@@ -254,7 +254,7 @@ function initButtonAnimations() {
  */
 function initStatsCounter() {
     const statsElements = document.querySelectorAll('[data-count]');
-    
+
     const observerOptions = {
         threshold: 0.5,
         rootMargin: '0px 0px -50px 0px'
@@ -285,7 +285,7 @@ function initStatsCounter() {
                 current = target;
                 clearInterval(timer);
             }
-            
+
             // Format number with commas for large numbers
             const formattedNumber = Math.floor(current).toLocaleString();
             element.textContent = formattedNumber + (element.getAttribute('data-suffix') || '');
@@ -298,16 +298,16 @@ function initStatsCounter() {
  */
 function initTypingAnimation() {
     const typingElements = document.querySelectorAll('.typing-effect');
-    
+
     typingElements.forEach((element, index) => {
         const text = element.textContent;
         element.textContent = '';
         element.style.opacity = '1';
-        
+
         let charIndex = 0;
         const typingSpeed = 50; // milliseconds per character
         const startDelay = index * 500; // stagger multiple elements
-        
+
         setTimeout(() => {
             const typeWriter = setInterval(() => {
                 if (charIndex < text.length) {
@@ -353,14 +353,14 @@ function initScrollAnimations() {
  */
 function initSmoothScrolling() {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    
+
     anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 const headerOffset = 80; // Account for fixed header
                 const elementPosition = targetElement.offsetTop;
@@ -384,7 +384,7 @@ function handleResize() {
     if (hero) {
         hero.style.transform = 'translateY(0)';
     }
-    
+
     // Adjust particle positions
     const particles = document.querySelectorAll('.hero-particles .particle');
     particles.forEach(particle => {
@@ -401,14 +401,14 @@ window.addEventListener('resize', () => {
 });
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initHomePage();
     initScrollAnimations();
     initSmoothScrolling();
 });
 
 // Reinitialize on page visibility change (for countdown accuracy)
-document.addEventListener('visibilitychange', function() {
+document.addEventListener('visibilitychange', function () {
     if (!document.hidden) {
         // Restart countdown when page becomes visible again
         initCountdownTimer();

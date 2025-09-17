@@ -41,7 +41,7 @@
 
 .stat-item {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   padding: 2rem;
   background: var(--gray-background);
@@ -76,7 +76,7 @@
   display: flex;
   align-items: center;
   padding: 0 calc(5% + 2rem);
-  flex-direction: column;
+  flex-flow: column;
   gap: 3rem;
   background: var(--background);
 }
@@ -89,7 +89,7 @@
 
 .formations-grid {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 3rem;
   margin-top: 2rem;
 }
@@ -192,12 +192,12 @@
 
 .formation-main-content {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
 }
 
 .formation-sidebar-content {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
 }
 
 /* Better organization for formation details */
@@ -401,7 +401,7 @@
 /* Enhanced Committees Grid - Full Width Single Column Layout */
 .committees-grid {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 2rem;
   margin-top: 2rem;
   width: calc(100% + 4rem);
@@ -1046,7 +1046,7 @@ h4:contains("TBO Constitution")::after {
   }
 
   .committee-item ul {
-    flex-direction: column;
+    flex-flow: column;
     columns: 1;
   }
 }
@@ -1099,7 +1099,7 @@ h4:contains("TBO Constitution")::after {
 
   .committees-grid {
     grid-template-columns: 1fr;
-    flex-direction: column;
+    flex-flow: column;
     gap: 1rem;
     width: calc(100% + 2rem);
     margin-left: -1rem;
@@ -1495,7 +1495,7 @@ h4:contains("TBO Constitution")::after {
   }
 
   .committee-item ul {
-    flex-direction: column;
+    flex-flow: column;
     columns: 1;
   }
 

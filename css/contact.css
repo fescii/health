@@ -426,7 +426,7 @@
   }
 
   .contact-method {
-    flex-direction: column;
+    flex-flow: column;
     text-align: center;
     gap: 0.8rem;
   }

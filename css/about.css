@@ -218,7 +218,7 @@
 }
 
 .timeline-phase:nth-child(even) {
-  flex-direction: row-reverse;
+  flex-flow: row-reverse;
 }
 
 .timeline-phase:nth-child(even) .phase-card {
@@ -775,7 +775,7 @@
 
 .metric-item {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 0.5rem;
   padding: 1.5rem;
   background: var(--background);
@@ -851,7 +851,7 @@
 /* Progress Dashboard */
 .progress-dashboard {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 2rem;
   align-items: center;
   margin-bottom: 4rem;
@@ -861,7 +861,7 @@
 /* Completion Metrics */
 .completion-metrics {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 1.8rem;
   width: 100%;
 }
@@ -930,7 +930,7 @@
 
 .metric-info {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 0.4rem;
 }
 
@@ -986,7 +986,7 @@
   }
 
   .timeline-controls {
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
   }
 
@@ -1005,7 +1005,7 @@
   }
 
   .phase-meta {
-    flex-direction: column;
+    flex-flow: column;
     gap: 0.5rem;
   }
 
@@ -1052,7 +1052,7 @@
   }
 
   .timeline-phase:nth-child(even) {
-    flex-direction: row;
+    flex-flow: row;
   }
 }
 
@@ -1062,7 +1062,7 @@
   }
 
   .timeline-phase {
-    flex-direction: row !important;
+    flex-flow: row !important;
     align-items: flex-start;
     margin-bottom: 2rem;
   }
@@ -1128,7 +1128,7 @@
   }
 
   .timeline-controls {
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
     gap: 0.75rem;
   }
