@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/hero.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/footer.css">
-	<link rel="stylesheet" href="css/platforms.css">
+	<link rel="stylesheet" href="css/pricing.css">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -33,10 +33,10 @@
 			</div>
 			<ul class="nav-menu">
 				<li class="nav-item">
-					<a href="index.html" class="nav-link active">Home</a>
+					<a href="index.html" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="pricing.html" class="nav-link">Pricing</a>
+					<a href="pricing.html" class="nav-link active">Pricing</a>
 				</li>
 				<li class="nav-item">
 					<a href="about.html" class="nav-link">About</a>
@@ -74,266 +74,476 @@
 	<section class="platforms-overview">
 		<div class="container">
 			<div class="overview-content" data-aos="fade-up">
-				<h2>Personalized Healthcare for Every Lifestyle</h2>
+				<h2>Personalized healthcare for every lifestyle</h2>
 				<p>From basic health monitoring to premium concierge medicine, our tiered approach ensures you get
 					exactly the care you need.</p>
 			</div>
 		</div>
 	</section>
 
-	<!-- Platforms Grid -->
-	<section class="platforms-grid-section">
-		<div class="platforms-container">
-			<!-- Bronze Tier -->
-			<div class="platform-card pricing-card bronze" data-aos="fade-up" data-aos-delay="100">
-				<div class="platform-header pricing-header">
-					<h3>Bronze Access</h3>
-					<div class="price">$24.99<span>/month</span></div>
-					<p class="tier-description">Essential support and access to care</p>
-				</div>
-				<div class="platform-content">
-					<div class="platform-features pricing-features">
-						<div class="feature-item">✔ 24/7 Ground & Air Emergency Evacuation</div>
-						<div class="feature-item">✔ Annual Comprehensive Physical Exam</div>
-						<div class="feature-item">✔ 24/7 Communication via Phone, Email, or Text</div>
-						<div class="feature-item">✔ Priority Scheduling – Same or Next-Day Appointments</div>
-						<div class="feature-item">✔ Medication Delivery within 24 Hours</div>
-						<div class="feature-item">✔ Specialist Care Coordination</div>
-						<div class="feature-item">✔ Access to Electronic Medical Records</div>
-					</div>
-				</div>
-				<div class="pricing-cta">
-					<a href="contact.html" class="btn-secondary">Choose Bronze</a>
-				</div>
-			</div>
-
-			<!-- Silver Tier -->
-			<div class="platform-card pricing-card silver" data-aos="fade-up" data-aos-delay="150">
-				<div class="platform-header pricing-header">
-					<h3>Silver Tier</h3>
-					<div class="price">$39.99<span>/month</span></div>
-					<p class="tier-description">Everything in Bronze plus enhanced care features</p>
-				</div>
-				<div class="platform-content">
-					<div class="platform-features pricing-features">
-						<div class="feature-item">✔ All Bronze Access features</div>
-						<div class="feature-item">✔ Extended Appointments – Up to 60 Minutes</div>
-						<div class="feature-item">✔ Personalized Preventive Wellness Plan</div>
-						<div class="feature-item">✔ Quarterly Health Check-Ins</div>
-						<div class="feature-item">✔ Selected Labs and Screenings Included</div>
-						<div class="feature-item">✔ Convenient Telehealth Appointments</div>
-					</div>
-				</div>
-				<div class="pricing-cta">
-					<a href="contact.html" class="btn-primary">Choose Silver</a>
-				</div>
-			</div>
-
-			<!-- Diamond Tier -->
-			<div class="platform-card pricing-card diamond" data-aos="fade-up" data-aos-delay="200">
-				<div class="platform-header pricing-header">
-					<h3>Diamond Tier</h3>
-					<div class="price">$59.99<span>/month</span></div>
-					<p class="tier-description">Everything in Silver plus premium concierge-level services</p>
-				</div>
-				<div class="platform-content">
-					<div class="platform-features pricing-features">
-						<div class="feature-item">✔ All Silver Tier features</div>
-						<div class="feature-item">✔ 24/7 Direct Physician Access</div>
-						<div class="feature-item">✔ Monthly Virtual Wellness Check-Ins</div>
-						<div class="feature-item">✔ Reduced Fees for In-Home Visits</div>
-						<div class="feature-item">✔ Health Coaching & Lifestyle Support</div>
-						<div class="feature-item">✔ Travel Medical Support</div>
-						<div class="feature-item">✔ Nationwide Specialist Access</div>
-						<div class="feature-item">✔ Emergency Medical Advocacy</div>
-					</div>
-				</div>
-				<div class="pricing-cta">
-					<a href="contact.html" class="btn-secondary">Choose Diamond</a>
-				</div>
-			</div>
-
-			<!-- Platinum Package -->
-			<div class="platform-card pricing-card platinum" data-aos="fade-up" data-aos-delay="250">
-				<div class="platform-header pricing-header">
-					<h3>Platinum Package</h3>
-					<div class="price">$350<span>/year</span></div>
-					<p class="tier-description">Add-on for Silver & Diamond Members (Under 70 years)</p>
-				</div>
-				<div class="platform-content">
-					<div class="platform-features pricing-features">
-						<div class="feature-item">✔ Emergency medical evacuation insurance (Up to Kshs. 20 million)
+	<!-- Pricing Plans -->
+	<section class="pricing-section">
+		<div class="container">
+			<div class="pricing-grid">
+				<!-- Bronze Tier -->
+				<div class="pricing-card bronze-tier" data-aos="fade-up" data-aos-delay="100">
+					<div class="pricing-badge">Essential</div>
+					<div class="pricing-header">
+						<h3 class="plan-name">Bronze Access</h3>
+						<div class="price-container">
+							<span class="currency">$</span>
+							<span class="price">24.99</span>
+							<span class="period">/month</span>
 						</div>
-						<div class="feature-item">✔ Medical airlift to South Africa if services unavailable locally
+						<p class="plan-description">Essential support and access to care</p>
+					</div>
+					<div class="pricing-features">
+						<ul class="features-list">
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								24/7 Ground & Air Emergency Evacuation
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Annual Comprehensive Physical Exam
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								24/7 Communication via Phone, Email, or Text
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Priority Scheduling – Same or Next-Day Appointments
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Medication Delivery within 24 Hours
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Specialist Care Coordination
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Access to Electronic Medical Records
+							</li>
+						</ul>
+					</div>
+					<div class="pricing-footer">
+						<a href="about.html" class="pricing-btn btn-outline">Choose Bronze</a>
+					</div>
+				</div>
+
+				<!-- Silver Tier -->
+				<div class="pricing-card silver-tier featured" data-aos="fade-up" data-aos-delay="150">
+					<div class="pricing-badge popular">Most Popular</div>
+					<div class="pricing-header">
+						<h3 class="plan-name">Silver Tier</h3>
+						<div class="price-container">
+							<span class="currency">$</span>
+							<span class="price">39.99</span>
+							<span class="period">/month</span>
 						</div>
-						<div class="feature-item">✔ Full coordination with premier hospitals</div>
-						<div class="feature-item">✔ Access to Aga Khan, Nairobi Hospital, Karen Hospital</div>
-						<div class="feature-item">✔ Return flights and repatriation coverage included</div>
-						<div class="feature-item">✔ Body repatriation coverage (if needed)</div>
+						<p class="plan-description">Everything in Bronze plus enhanced care features</p>
+					</div>
+					<div class="pricing-features">
+						<ul class="features-list">
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								All Bronze Access features
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Extended Appointments – Up to 60 Minutes
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Personalized Preventive Wellness Plan
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Quarterly Health Check-Ins
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Selected Labs and Screenings Included
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Convenient Telehealth Appointments
+							</li>
+						</ul>
+					</div>
+					<div class="pricing-footer">
+						<a href="about.html" class="pricing-btn btn-primary">Choose Silver</a>
 					</div>
 				</div>
-				<div class="pricing-cta">
-					<a href="contact.html" class="btn-premium">Add Platinum</a>
+
+				<!-- Diamond Tier -->
+				<div class="pricing-card diamond-tier" data-aos="fade-up" data-aos-delay="200">
+					<div class="pricing-badge">Premium</div>
+					<div class="pricing-header">
+						<h3 class="plan-name">Diamond Tier</h3>
+						<div class="price-container">
+							<span class="currency">$</span>
+							<span class="price">59.99</span>
+							<span class="period">/month</span>
+						</div>
+						<p class="plan-description">Everything in Silver plus premium concierge-level services</p>
+					</div>
+					<div class="pricing-features">
+						<ul class="features-list">
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								All Silver Tier features
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								24/7 Direct Physician Access
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Monthly Virtual Wellness Check-Ins
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Reduced Fees for In-Home Visits
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Health Coaching & Lifestyle Support
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Travel Medical Support
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Nationwide Specialist Access
+							</li>
+							<li class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Emergency Medical Advocacy
+							</li>
+						</ul>
+					</div>
+					<div class="pricing-footer">
+						<a href="about.html" class="pricing-btn btn-outline">Choose Diamond</a>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- Special Offer Section -->
-		<div class="special-offer-section" data-aos="fade-up" data-aos-delay="300">
-			<div class="container">
-				<div class="offer-content">
-					<h3>Special Offer for New Members</h3>
-					<p>Initial Home Visit: <span class="discounted-price">$75</span> <span class="original-price">(Reg.
-							$99)</span></p>
-					<p>Available within Nairobi & surrounding areas</p>
-					<ul class="offer-features">
-						<li>Comprehensive head-to-toe physical assessment</li>
-						<li>Review of current medications</li>
-						<li>Personalized health recommendations</li>
-						<li>Lab work recommendations (lab costs separate)</li>
-					</ul>
-					<a href="contact.html" class="offer-cta">Book Your Initial Visit</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- FAQ Section -->
-		<div class="faq-section" data-aos="fade-up" data-aos-delay="400">
-			<div class="container">
-				<h3>Frequently Asked Questions</h3>
-				<div class="faq-grid">
-					<div class="faq-item">
-						<h4>What is concierge medicine?</h4>
-						<p>Membership-based care with 24/7 access, longer visits, and mobile services.</p>
+			<!-- Platinum Add-on -->
+			<div class="addon-section" data-aos="fade-up" data-aos-delay="300">
+				<div class="addon-card platinum-addon">
+					<div class="addon-header">
+						<h3 class="addon-name">Platinum Package</h3>
+						<div class="addon-price">
+							<span class="currency">$</span>
+							<span class="price">350</span>
+							<span class="period">/year</span>
+						</div>
+						<p class="addon-description">Add-on for Silver & Diamond Members (Under 70 years)</p>
 					</div>
-					<div class="faq-item">
-						<h4>Do I need insurance?</h4>
-						<p>Yes. Diasync enhances your care but doesn't replace health insurance.</p>
+					<div class="addon-features">
+						<div class="feature-grid">
+							<div class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Emergency medical evacuation insurance (Up to Kshs. 20 million)
+							</div>
+							<div class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Medical airlift to South Africa if services unavailable locally
+							</div>
+							<div class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Full coordination with premier hospitals
+							</div>
+							<div class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Access to Aga Khan, Nairobi Hospital, Karen Hospital
+							</div>
+							<div class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Return flights and repatriation coverage included
+							</div>
+							<div class="feature-item">
+								<svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd" />
+								</svg>
+								Body repatriation coverage (if needed)
+							</div>
+						</div>
 					</div>
-					<div class="faq-item">
-						<h4>Is emergency evacuation covered?</h4>
-						<p>Yes – with an active subscription (5-day waiting period applies).</p>
-					</div>
-					<div class="faq-item">
-						<h4>Can I manage care online?</h4>
-						<p>Yes. Book visits, view labs, and chat with doctors via our digital platform.</p>
-					</div>
-					<div class="faq-item">
-						<h4>What about traveling abroad?</h4>
-						<p>We coordinate care and support your health maintenance while traveling.</p>
-					</div>
-					<div class="faq-item">
-						<h4>Can I enroll a family member in Kenya?</h4>
-						<p>Absolutely. We support remote enrollment and coordination.</p>
+					<div class="addon-footer">
+						<a href="about.html" class="pricing-btn btn-premium">Add Platinum</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- Special Offer Section -->
+	<section class="special-offer-section" data-aos="fade-up" data-aos-delay="300">
+		<div class="container">
+			<div class="offer-content">
+				<h3>Special Offer for New Members</h3>
+				<p>Initial Home Visit: <span class="discounted-price">$75</span> <span class="original-price">(Reg.
+						$99)</span></p>
+				<p>Available within Nairobi & surrounding areas</p>
+				<ul class="offer-features">
+					<li>Comprehensive head-to-toe physical assessment</li>
+					<li>Review of current medications</li>
+					<li>Personalized health recommendations</li>
+					<li>Lab work recommendations (lab costs separate)</li>
+				</ul>
+				<a href="about.html" class="offer-cta">Book Your Initial Visit</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="faq-section" data-aos="fade-up" data-aos-delay="400">
+		<div class="container">
+			<h3>Frequently Asked Questions</h3>
+			<div class="faq-grid">
+				<div class="faq-item">
+					<h4>What is concierge medicine?</h4>
+					<p>Membership-based care with 24/7 access, longer visits, and mobile services.</p>
+				</div>
+				<div class="faq-item">
+					<h4>Do I need insurance?</h4>
+					<p>Yes. Diasync enhances your care but doesn't replace health insurance.</p>
+				</div>
+				<div class="faq-item">
+					<h4>Is emergency evacuation covered?</h4>
+					<p>Yes – with an active subscription (5-day waiting period applies).</p>
+				</div>
+				<div class="faq-item">
+					<h4>Can I manage care online?</h4>
+					<p>Yes. Book visits, view labs, and chat with doctors via our digital platform.</p>
+				</div>
+				<div class="faq-item">
+					<h4>What about traveling abroad?</h4>
+					<p>We coordinate care and support your health maintenance while traveling.</p>
+				</div>
+				<div class="faq-item">
+					<h4>Can I enroll a family member in Kenya?</h4>
+					<p>Absolutely. We support remote enrollment and coordination.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Footer -->
-	footer class="footer">
-	<div class="container">
-		<div class="footer-content">
-			<div class="footer-section logo-section">
-				<div class="footer-logo">
-					<div class="logo">
-						<a href="/" class="text">
-							<div class="logo-image">
-								<img src="img/logos/header.png" alt="Diasync Logo" class="logo-img">
-							</div>
-							<span class="text">
-								<span class="top">Diasync</span>
-								<span class="small">International</span>
-							</span>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section logo-section">
+					<div class="footer-logo">
+						<div class="logo">
+							<a href="/" class="text">
+								<div class="logo-image">
+									<img src="img/logos/header.png" alt="Diasync Logo" class="logo-img">
+								</div>
+								<span class="text">
+									<span class="top">Diasync</span>
+									<span class="small">International</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<p>We provides concierge medical services that synchronize health and mobilize care,
+						delivering seamless, personalized healthcare that integrates effortlessly into your lifestyle.
+					</p>
+					<div class="social-links">
+						<a href="https://wa.me/254123456789?text=Hello%20Diasync%20International%20team%2C%20I%20want%20to%20learn%20about%20your%20healthcare%20services."
+							class="social-link" aria-label="WhatsApp">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path
+									d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488" />
+							</svg>
+						</a>
+						<a href="https://www.instagram.com/alkebulancohesion" class="social-link" aria-label="Instagram">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path
+									d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+							</svg>
+						</a>
+						<a href="https://twitter.com/GrandChange" class="social-link" aria-label="X(Twitter)">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path
+									d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+							</svg>
+						</a>
+						<a href="#" class="social-link" aria-label="LinkedIn">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+								<rect x="2" y="9" width="4" height="12" />
+								<circle cx="4" cy="4" r="2" />
+							</svg>
+						</a>
+						<a href="https://www.facebook.com/groups/396586176465326" class="social-link" aria-label="Facebook">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+							</svg>
+						</a>
+						<a href="tel:+254703538027" class="social-link" aria-label="Call">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path
+									d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+							</svg>
 						</a>
 					</div>
 				</div>
-				<p>We provides concierge medical services that synchronize health and mobilize care,
-					delivering seamless, personalized healthcare that integrates effortlessly into your lifestyle.
-				</p>
-				<div class="social-links">
-					<a href="https://wa.me/254123456789?text=Hello%20Diasync%20International%20team%2C%20I%20want%20to%20learn%20about%20your%20healthcare%20services."
-						class="social-link" aria-label="WhatsApp">
-						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-							<path
-								d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488" />
-						</svg>
-					</a>
-					<a href="https://www.instagram.com/alkebulancohesion" class="social-link" aria-label="Instagram">
-						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-							<path
-								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-						</svg>
-					</a>
-					<a href="https://twitter.com/GrandChange" class="social-link" aria-label="X(Twitter)">
-						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-							<path
-								d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-						</svg>
-					</a>
-					<a href="#" class="social-link" aria-label="LinkedIn">
-						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-							<rect x="2" y="9" width="4" height="12" />
-							<circle cx="4" cy="4" r="2" />
-						</svg>
-					</a>
-					<a href="https://www.facebook.com/groups/396586176465326" class="social-link" aria-label="Facebook">
-						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-							<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-						</svg>
-					</a>
-					<a href="tel:+254703538027" class="social-link" aria-label="Call">
-						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-							<path
-								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-						</svg>
-					</a>
+				<div class="footer-section normal">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">Our Story</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+						<li><a href="soon.html">Launch</a></li>
+					</ul>
+				</div>
+				<div class="footer-section normal">
+					<h4>Support</h4>
+					<ul>
+						<li><a href="#" onclick="alert('Documentation coming soon!')">Docs</a></li>
+						<li><a href="#" onclick="alert('API access coming soon!')">API Access</a></li>
+						<li><a href="about.html">Help Center</a></li>
+						<li><a href="#" onclick="alert('Terms of Service coming soon!')">Terms of Service</a></li>
+					</ul>
+				</div>
+				<div class="footer-section support-section">
+					<h4>24/7 Medical Support</h4>
+					<div class="footer-contact-links">
+						<a href="https://wa.me/254123456789?text=Hello%20Diasync%20International%20team%2C%20I%20need%20medical%20assistance."
+							target="_blank" class="footer-contact-link whatsapp-big">
+							<span>WhatsApp</span>
+						</a>
+						<a href="tel:+254123456789" class="footer-contact-link phone-link whatsapp-big">
+							<span>Emergency Line</span>
+						</a>
+					</div>
 				</div>
 			</div>
-			<div class="footer-section normal">
-				<h4>Quick Links</h4>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">Our Story</a></li>
-					<li><a href="pricing.html">Pricing</a></li>
-					<li><a href="soon.html">Launch</a></li>
-				</ul>
-			</div>
-			<div class="footer-section normal">
-				<h4>Support</h4>
-				<ul>
-					<li><a href="#" onclick="alert('Documentation coming soon!')">Docs</a></li>
-					<li><a href="#" onclick="alert('API access coming soon!')">API Access</a></li>
-					<li><a href="contact.html">Help Center</a></li>
-					<li><a href="#" onclick="alert('Terms of Service coming soon!')">Terms of Service</a></li>
-				</ul>
-			</div>
-			<div class="footer-section support-section">
-				<h4>24/7 Medical Support</h4>
-				<div class="footer-contact-links">
-					<a href="https://wa.me/254123456789?text=Hello%20Diasync%20International%20team%2C%20I%20need%20medical%20assistance."
-						target="_blank" class="footer-contact-link whatsapp-big">
-						<span>WhatsApp</span>
-					</a>
-					<a href="tel:+254123456789" class="footer-contact-link phone-link whatsapp-big">
-						<span>Emergency Line</span>
-					</a>
+			<div class="footer-bottom">
+				<div class="footer-bottom-content">
+					<p>&copy; <span class="copyright-year">2024</span> Diasync International.</p>
+					<div class="footer-legal">
+						<a href="#" onclick="alert('Privacy Policy coming soon!')">Privacy Policy</a>
+						<a href="#" onclick="alert('Terms of Service coming soon!')">Terms of Service</a>
+						<a href="#" onclick="alert('Cookie Policy coming soon!')">Cookie Policy</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer-bottom">
-			<div class="footer-bottom-content">
-				<p>&copy; <span class="copyright-year">2024</span> Diasync International.</p>
-				<div class="footer-legal">
-					<a href="#" onclick="alert('Privacy Policy coming soon!')">Privacy Policy</a>
-					<a href="#" onclick="alert('Terms of Service coming soon!')">Terms of Service</a>
-					<a href="#" onclick="alert('Cookie Policy coming soon!')">Cookie Policy</a>
-				</div>
-			</div>
-		</div>
-	</div>
 	</footer>
 
 	<script src="js/script.js"></script>
