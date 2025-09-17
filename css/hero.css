@@ -326,13 +326,6 @@
   font-family: var(--font-read), sans-serif;
 }
 
-/* Soon Page Hero */
-.coming-soon-main {
-  padding-top: 70px;
-  /* Only header height */
-  min-height: 100vh;
-}
-
 .hero-section {
   text-align: center;
   padding: 80px 5%;

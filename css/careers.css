@@ -8,6 +8,7 @@
   padding-top: calc(70px + 80px); /* Header height + desired padding */
   min-height: 100vh;
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -576,25 +577,7 @@
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border: var(--border);
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: var(--modal-shadow);
-}
-
-.form-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--accent-linear);
-  opacity: 0.1;
-  border-radius: 24px;
-  animation: glowPulse 4s ease-in-out infinite;
+  padding: 10px;
 }
 
 .form-title {
@@ -807,6 +790,7 @@
 
   .hero-stats {
     gap: 1rem;
+    margin-top: 60px;
     width: 100%;
     max-width: calc(100% - 20px);
   }
@@ -865,8 +849,12 @@
 /* Mobile Portrait (480px and below) */
 @media (max-width: 480px) {
   .careers-hero {
-    min-height: 70vh;
+    min-height: calc(100vh - 70px);
     padding-top: calc(70px + 40px);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-evenly;
   }
 
   .careers-hero-content {
@@ -885,7 +873,6 @@
 
   .hero-stats {
     gap: 0.8rem;
-    max-width: 280px;
   }
 
   .stat-item {
@@ -957,7 +944,9 @@
   }
 
   .form-container {
-    padding: 2rem 1.5rem;
+    padding: 20px 10px;
+    width: 100%;
+    margin: 0;
   }
 
   .form-title {
@@ -1045,5 +1034,152 @@
   .job-section::before,
   .job-type-card::before {
     animation: none;
+  }
+}
+
+/* ================================= */
+/* CONTACT SECTION STYLES            */
+/* ================================= */
+
+.contact-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--border);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+}
+
+.method-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--accent-linear);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.method-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.method-content h3 {
+  font-family: var(--font-main);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.email-link {
+  font-family: var(--font-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.method-content p {
+  font-family: var(--font-text);
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.contact-instructions {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: var(--border);
+  border-radius: 16px;
+}
+
+.contact-instructions h4 {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.contact-instructions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-instructions li {
+  font-family: var(--font-text);
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.contact-instructions li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .method-icon {
+    align-self: center;
+  }
+
+  .contact-instructions {
+    padding: 1.5rem;
+  }
+
+  .contact-instructions li {
+    padding-left: 1.2rem;
   }
 }

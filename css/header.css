@@ -13,8 +13,6 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--header-background) !important;
-  background-color: var(--accent-color) !important;
   /* Fallback color */
   backdrop-filter: blur(3px);
   border-bottom: var(--border);
