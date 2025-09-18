@@ -727,3 +727,73 @@
     padding: 60px 0;
   }
 }
+
+/* Eligibility Section */
+.eligibility-section {
+  padding: 80px 0;
+  background: var(--light-background);
+}
+
+.eligibility-section h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  font-family: var(--font-main), sans-serif;
+}
+
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eligibility-item {
+  background: var(--white-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.eligibility-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.eligibility-item h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: var(--font-main), sans-serif;
+}
+
+.eligibility-item p {
+  color: var(--text-color);
+  line-height: 1.6;
+  font-family: var(--font-read), sans-serif;
+}
+
+@media (max-width: 768px) {
+  .eligibility-section {
+    padding: 60px 0;
+  }
+
+  .eligibility-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .eligibility-grid {
+    gap: 1.5rem;
+  }
+
+  .eligibility-item {
+    padding: 1.5rem;
+  }
+}
