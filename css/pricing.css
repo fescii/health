@@ -222,6 +222,30 @@
   font-family: var(--font-read), sans-serif;
 }
 
+/* Annual Discount */
+.annual-discount {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(139, 185, 148, 0.1);
+  border: 1px solid rgba(139, 185, 148, 0.3);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.discount-text {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: var(--font-read), sans-serif;
+  line-height: 1.4;
+}
+
+.discount-text strong {
+  color: var(--title-color);
+  font-weight: 700;
+}
+
 /* Pricing Features */
 .pricing-features {
   margin-bottom: 2.5rem;
